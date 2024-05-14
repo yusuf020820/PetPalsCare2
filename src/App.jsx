@@ -50,18 +50,10 @@ function App() {
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />
       </Routes>
 
-      <LoginDokterPage/>
     </div>
 
     
   );
-  {
-    /* <Navbar/>
-    <Notfound/>
-    <Footer/> */
-
-    
-  }
 }
 
 export default App;

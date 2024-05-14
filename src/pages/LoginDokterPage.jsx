@@ -2,7 +2,7 @@ import Logo from '../assets/images/logo.png'
 const LoginDokterPage = () => {
   return (
     <>
-      <div className="container flex justify-center items-center">
+      <div className="flex justify-center items-center">
         {/* kiri */}
         <div className="w-1/2 h-screen flex justify-center items-center" >
 
@@ -28,7 +28,7 @@ const LoginDokterPage = () => {
         {/* kanan */}
         <div className="w-1/2 h-screen bg-[#F7DBA7] flex justify-center items-center custom-border-radius">
           <div className=''>
-            <div className='h-auto w-full max-w-80 '>
+            <div className='h-auto w-full max-w-72'>
               <img src={Logo} alt="Logo" />
             </div>
 
