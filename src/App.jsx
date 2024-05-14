@@ -50,6 +50,7 @@ function App() {
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />
       </Routes>
 
+      <LoginDokterPage/>
     </div>
 
     
