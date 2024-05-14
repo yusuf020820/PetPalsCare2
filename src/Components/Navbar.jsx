@@ -35,8 +35,8 @@ const Navbar = () => {
                 <i className="fas fa-search text-gray-500"></i>
               </span>
             </div>
-            <a href="/signup" className="py-2 px-4 bg-[#F7DBA7] border border-[#DE9455] text-[#DE9455] rounded-full hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
-            <a href="/signin" className="py-2 px-4 bg-[#DE9455] text-white rounded-full hover:bg-[#D68B4B] transition duration-300">Sign In</a>
+            <a href="/Daftar-PetPalsCare" className="py-2 px-4 bg-[#F7DBA7] border border-[#DE9455] text-[#DE9455] rounded-full hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
+            <a href="/Login-PetPalsCare" className="py-2 px-4 bg-[#DE9455] text-white rounded-full hover:bg-[#D68B4B] transition duration-300">Sign In</a>
           </div>
 
           {/* Mobile menu button */}
