@@ -65,7 +65,7 @@ const Navbar = () => {
 
               <a
                 href="/#"
-                className="ml-4 rounded-full bg-[#DE9455] px-7 py-3 text-base font-medium text-white hover:bg-[#D68B4B]"
+                className="ml-4 rounded-full bg-[#DE9455] px-7 py-3 text-base font-medium text-black-0 hover:bg-[#D68B4B]"
               >
                 Sign Up
               </a>
