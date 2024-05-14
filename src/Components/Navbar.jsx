@@ -33,10 +33,10 @@ const Navbar = () => {
                   } `}
               >
                 <ul className="block lg:flex">
-                  <ListItem NavLink="/#">Beranda</ListItem>
-                  <ListItem NavLink="/#">Cari Dokter</ListItem>
-                  <ListItem NavLink="/#">Adopsi</ListItem>
-                  <ListItem NavLink="/#">Tentang Kami</ListItem>
+                  <ListItem NavLink="/">Beranda</ListItem>
+                  <ListItem NavLink="/Daftar-dokter-hewan">Cari Dokter</ListItem>
+                  <ListItem NavLink="/Adopsi-hewan">Adopsi</ListItem>
+                  <ListItem NavLink="/Tentang-PetPalsCare">Tentang Kami</ListItem>
                 </ul>
               </nav>
             </div>
@@ -52,14 +52,14 @@ const Navbar = () => {
                 />
               </div>
               <a
-                href="/#"
+                href="/Login-PetPalsCare"
                 className="px-7 py-3 text-base font-medium text-black hover:text-[#DE9455]"
               >
                 Sign in
               </a>
 
               <a
-                href="/#"
+                href="/Daftar-PetPalsCare"
                 className="ml-4 rounded-full bg-[#DE9455] px-7 py-3 text-base font-medium text-white hover:bg-[#D68B4B]"
               >
                 Sign Up
