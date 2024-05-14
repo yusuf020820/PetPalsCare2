@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="flex w-full items-center bg-[#F7DBA7] dark:bg-dark">
+    <header className="flex w-full items-center bg-[#F7DBA7]">
       <div className="container">
         <div className="relative -mx-4 flex items-center justify-between">
           <div className="w-24 max-w-full px-4">
@@ -33,7 +33,7 @@ const Navbar = () => {
               </button>
               <nav
                 id="navbarCollapse"
-                className={`absolute right-4 top-full w-full max-w-[250px] px-6 py-5 shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent ${
+                className={`absolute right-4 top-full w-full max-w-[250px] px-6 py-5 shadow lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent ${
                   !open && "hidden"
                 } `}
               >
