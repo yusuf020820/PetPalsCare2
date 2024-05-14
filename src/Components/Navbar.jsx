@@ -52,7 +52,7 @@ const Navbar = () => {
                 </span>
                 <input
                   type="text"
-                  className="w-full rounded-full border border-gray-300 bg-white px-10 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#DE9455] dark:border-gray-600 dark:bg-dark dark:text-white"
+                  className="w-full rounded-full border border-gray-300 bg-white px-10 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#DE9455] dark:border-gray-600 dark:text-white"
                   placeholder="Search..."
                 />
               </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
               <a
                 href="/#"
-                className="ml-4 rounded-full bg-[#DE9455] px-7 py-3 text-base font-medium text-black-0 hover:bg-[#D68B4B]"
+                className="ml-4 rounded-full bg-[#DE9455] px-7 py-3 text-base font-medium text-white hover:bg-[#D68B4B]"
               >
                 Sign Up
               </a>
