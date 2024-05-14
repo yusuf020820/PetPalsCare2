@@ -1,4 +1,6 @@
 
+import logo from "../assets/images/logo.png";
+
 const VerifikasiPage = () => {
   return (
     <>
@@ -6,7 +8,7 @@ const VerifikasiPage = () => {
         <div>
           {/* logo */}
           <div className=" w-auto max-w-xs h-auto ">
-            <img src="img/logo.png" alt="logo" className="w-full max-w-48 pl-10" />
+            <img src={logo} alt="logo" className="w-full max-w-48 pl-10" />
           </div>
           {/* text */}
           <div className="text-center pt-20">
@@ -27,7 +29,7 @@ const VerifikasiPage = () => {
           {/* button */}
           <div className="w-full h-auto flex justify-center items-center py-4 ">
           <div className=" h-60 w-full max-w-4xl">
-          <button className="bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-4 px-8 rounded-full float-right" >hahahahahah</button>
+          <button className="bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-4 px-8 rounded-full float-right" >Kembali Ke Beranda</button>
           </div>
           </div>
           {/* end Button */}
