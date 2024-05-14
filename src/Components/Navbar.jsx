@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="relative -mx-4 flex items-center justify-between">
           <div className="w-24 max-w-full px-4">
             <a href="/#" className="block w-full py-5">
-              <img src={logo} alt="logo" className="dark:hidden" />
+              <img src={logo} alt="logo"/>
             </a>
           </div>
           <div className="flex w-full items-center justify-between px-4">
@@ -47,7 +47,7 @@ const Navbar = () => {
                 </span>
                 <input
                   type="text"
-                  className="w-full rounded-full border border-gray-300 bg-white px-10 py-2 text-base text-black focus:outline-none focus:ring-2 focus:ring-[#DE9455] dark:border-gray-600"
+                  className="w-full rounded-full border border-gray-300 bg-white px-10 py-2 text-base text-black focus:outline-none focus:ring-2 focus:ring-[#DE9455]"
                   placeholder="Search..."
                 />
               </div>
