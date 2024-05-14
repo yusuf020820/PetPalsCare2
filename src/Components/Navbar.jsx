@@ -53,9 +53,9 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} pb-4`}>
         <a href="/" className="block py-2 px-4 text-sm hover:bg-gray-200">Beranda</a>
-        <a href="/cari-dokter" className="block py-2 px-4 text-sm hover:bg-gray-200">Cari Dokter</a>
-        <a href="/adopsi" className="block py-2 px-4 text-sm hover:bg-gray-200">Adopsi</a>
-        <a href="/tentang-kami" className="block py-2 px-4 text-sm hover:bg-gray-200">Tentang Kam</a>
+        <a href="/Daftar-dokter-hewan" className="block py-2 px-4 text-sm hover:bg-gray-200">Cari Dokter</a>
+        <a href="/Adopsi-hewan" className="block py-2 px-4 text-sm hover:bg-gray-200">Adopsi</a>
+        <a href="/Tentang-PetPalsCare" className="block py-2 px-4 text-sm hover:bg-gray-200">Tentang Kam</a>
         <div className="px-4 py-2">
           <div className="relative">
             <input 
@@ -68,8 +68,8 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <a href="/signup" className="block py-2 px-4 bg-[#F7DBA7] text-[#DE9455] border border-[#DE9455] rounded-full mx-4 my-2 hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
-        <a href="/signin" className="block py-2 px-4 bg-[#DE9455] text-white rounded-full mx-4 my-2 hover:bg-[#D68B4B] transition duration-300">Sign In</a>
+        <a href="/Daftar-PetPalsCare" className="block py-2 px-4 bg-[#F7DBA7] text-[#DE9455] border border-[#DE9455] rounded-full mx-4 my-2 hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
+        <a href="/Login-PetPalsCare" className="block py-2 px-4 bg-[#DE9455] text-white rounded-full mx-4 my-2 hover:bg-[#D68B4B] transition duration-300">Sign In</a>
       </div>
     </nav>
   );
