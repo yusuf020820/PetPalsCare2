@@ -52,14 +52,14 @@ const Navbar = () => {
                 />
               </div>
               <a
-                href="/#"
+                href="/Login-PetPalsCare"
                 className="px-7 py-3 text-base font-medium text-black hover:text-[#DE9455]"
               >
                 Sign in
               </a>
 
               <a
-                href="/#"
+                href="/Daftar-PetPalsCare"
                 className="ml-4 rounded-full bg-[#DE9455] px-7 py-3 text-base font-medium text-white hover:bg-[#D68B4B]"
               >
                 Sign Up
