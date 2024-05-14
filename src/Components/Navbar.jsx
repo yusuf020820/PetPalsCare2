@@ -68,8 +68,8 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <a href="/Daftar-PetPalsCare" className="block py-2 px-4 bg-[#F7DBA7] text-[#DE9455] border border-[#DE9455] rounded-full mx-4 my-2 hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
-        <a href="/Login-PetPalsCare" className="block py-2 px-4 bg-[#DE9455] text-white rounded-full mx-4 my-2 hover:bg-[#D68B4B] transition duration-300">Sign In</a>
+        <a href="/Daftar-PetPalsCare" className="block py-2 px-4 bg-[#F7DBA7] text-[#DE9455] border border-[#DE9455] rounded-full mx-4 my-2 hover:bg-[#DE9455] hover:text-white transition duration-300">Daftar</a>
+        <a href="/Login-PetPalsCare" className="block py-2 px-4 bg-[#DE9455] text-white rounded-full mx-4 my-2 hover:bg-[#D68B4B] transition duration-300">Masuk</a>
       </div>
     </nav>
   );
