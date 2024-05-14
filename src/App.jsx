@@ -49,6 +49,8 @@ function App() {
         <Route path="/Detail-dokter-wanita" Component={DetailDokterCewe} />
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />
       </Routes>
+
+      <LoginDokterPage/>
     </div>
 
     
