@@ -36,7 +36,7 @@ const LoginDokterPage = () => {
               <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold ">Daftar</button>
             </div>
             <div className='flex justify-center items-center '>
-              <a href="#" className='text-[#DE9455] hover: text-[#D68B4B]'>Masuk Sebagai Pemilik</a>
+              <a href="#" className='text-[#777] '>Masuk Sebagai Pemilik</a>
             </div>
           </div>
         </div>
