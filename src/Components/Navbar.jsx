@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-[#F7DBA7] shadow-lg">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
           <div className="flex items-center">
@@ -17,20 +18,25 @@ const Navbar = () => {
           {/* Nav Links */}
           <div className="hidden md:flex space-x-10">
             <a href="/" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Beranda</a>
-            <a href="/cari-dokter" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Cari Dokter</a>
-            <a href="/adopsi" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Adopsi</a>
-            <a href="/tentang-kami" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Tentang Kami</a>
+            <a href="/Daftar-dokter-hewan" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Cari Dokter</a>
+            <a href="/Adopsi-hewan" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Adopsi</a>
+            <a href="/Tentang-PetPalsCare" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Tentang Kami</a>
           </div>
 
           {/* Search and Auth Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <input 
-              type="text" 
-              placeholder="Search..." 
-              className="px-5 py-1 border rounded-full focus:border-[#DE9455]" 
-            />
-            <a href="/signup" className="py-2 px-4 bg-[#F7DBA7] border border-[#DE9455] text-[#DE9455] rounded-full hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
-            <a href="/signin" className="py-2 px-4 bg-[#DE9455] text-white rounded-full hover:bg-[#D68B4B] transition duration-300">Sign In</a>
+            <div className="relative">
+              <input 
+                type="text" 
+                placeholder="Search..." 
+                className="px-5 py-1 pl-10 border rounded-full focus:border-[#DE9455]" 
+              />
+              <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
+                <i className="fas fa-search text-gray-500"></i>
+              </span>
+            </div>
+            <a href="/Daftar-PetPalsCare" className="py-2 px-4 bg-[#F7DBA7] border border-[#DE9455] text-[#DE9455] rounded-full hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
+            <a href="/Login-PetPalsCare" className="py-2 px-4 bg-[#DE9455] text-white rounded-full hover:bg-[#D68B4B] transition duration-300">Sign In</a>
           </div>
 
           {/* Mobile menu button */}
@@ -51,11 +57,16 @@ const Navbar = () => {
         <a href="/adopsi" className="block py-2 px-4 text-sm hover:bg-gray-200">Adopsi</a>
         <a href="/tentang-kami" className="block py-2 px-4 text-sm hover:bg-gray-200">Tentang Kami</a>
         <div className="px-4 py-2">
-          <input 
-            type="text" 
-            placeholder="Search..." 
-            className="w-full px-2 py-1 border rounded-md focus:border-[#DE9455]" 
-          />
+          <div className="relative">
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              className="w-full px-2 py-1 pl-10 border rounded-md focus:border-[#DE9455]" 
+            />
+            <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
+              <i className="fas fa-search text-gray-500"></i>
+            </span>
+          </div>
         </div>
         <a href="/signup" className="block py-2 px-4 bg-[#F7DBA7] text-[#DE9455] border border-[#DE9455] rounded-full mx-4 my-2 hover:bg-[#DE9455] hover:text-white transition duration-300">Sign Up</a>
         <a href="/signin" className="block py-2 px-4 bg-[#DE9455] text-white rounded-full mx-4 my-2 hover:bg-[#D68B4B] transition duration-300">Sign In</a>
