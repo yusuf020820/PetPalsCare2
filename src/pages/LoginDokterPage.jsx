@@ -11,10 +11,10 @@ const LoginDokterPage = () => {
               <h1 className="" >Masuk Sebagai Dokter Hewan</h1>
             </div>
             <div className="py-4">
-              <input type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="@email" />
+              <input type="text" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="@email" />
             </div>
             <div>
-              <input type="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Kata Sandi" />
+              <input type="password" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Kata Sandi" />
             </div>
 
             <div className="p-4">
@@ -29,7 +29,9 @@ const LoginDokterPage = () => {
         <div className="w-1/2 h-screen bg-[#F7DBA7] flex justify-center items-center custom-border-radius">
           <div className=''>
             <div className='h-auto w-full max-w-72'>
+              <a href="/">
               <img src={Logo} alt="Logo" />
+              </a>
             </div>
 
             <div className='p-4 flex justify-center items-center'>
