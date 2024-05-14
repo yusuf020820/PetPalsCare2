@@ -50,11 +50,15 @@ function App() {
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />
       </Routes>
     </div>
+
+    
   );
   {
     /* <Navbar/>
     <Notfound/>
     <Footer/> */
+
+    
   }
 }
 
