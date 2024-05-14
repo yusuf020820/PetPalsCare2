@@ -55,7 +55,7 @@ const Navbar = () => {
         <a href="/" className="block py-2 px-4 text-sm hover:bg-gray-200">Beranda</a>
         <a href="/cari-dokter" className="block py-2 px-4 text-sm hover:bg-gray-200">Cari Dokter</a>
         <a href="/adopsi" className="block py-2 px-4 text-sm hover:bg-gray-200">Adopsi</a>
-        <a href="/tentang-kami" className="block py-2 px-4 text-sm hover:bg-gray-200">Tentang Kami</a>
+        <a href="/tentang-kami" className="block py-2 px-4 text-sm hover:bg-gray-200">Tentang Kam</a>
         <div className="px-4 py-2">
           <div className="relative">
             <input 
