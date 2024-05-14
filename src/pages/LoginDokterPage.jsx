@@ -28,11 +28,7 @@ const LoginDokterPage = () => {
         {/* kanan */}
         <div className="w-1/2 h-screen bg-[#F7DBA7] flex justify-center items-center custom-border-radius">
           <div className=''>
-<<<<<<< HEAD
             <div className='h-auto w-full max-w-72'>
-=======
-            <div className='h-auto w-auto max-w-80 '>
->>>>>>> 911844f8d4668bc2371925c84f8756bfbb92353f
               <img src={Logo} alt="Logo" />
             </div>
 
