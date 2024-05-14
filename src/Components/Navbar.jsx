@@ -18,9 +18,9 @@ const Navbar = () => {
           {/* Nav Links */}
           <div className="hidden md:flex space-x-10">
             <a href="/" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Beranda</a>
-            <a href="/cari-dokter" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Cari Dokter</a>
-            <a href="/adopsi" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Adopsi</a>
-            <a href="/tentang-kami" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Tentang Kami</a>
+            <a href="/Daftar-dokter-hewan" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Cari Dokter</a>
+            <a href="/Adopsi-hewan" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Adopsi</a>
+            <a href="/Tentang-PetPalsCare" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Tentang Kami</a>
           </div>
 
           {/* Search and Auth Buttons */}
