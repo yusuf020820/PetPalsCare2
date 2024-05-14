@@ -1,93 +1,77 @@
-import React, { useState } from "react";
-import logo from "../assets/images/logo.png";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React from "react";
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
+const Card = () => {
   return (
-    <header className="flex w-full items-center bg-[#F7DBA7]">
-      <div className="container">
-        <div className="relative -mx-4 flex items-center justify-between">
-          <div className="w-24 max-w-full px-4">
-            <a href="/#" className="block w-full py-5">
-              <img
-                src={logo}
-                alt="logo"
-                className="dark:hidden"
-              />
-            </a>
-          </div>
-          <div className="flex w-full items-center justify-between px-4">
-            <div>
-              <button
-                onClick={() => setOpen(!open)}
-                id="navbarToggler"
-                className={`${
-                  open && "navbarTogglerActive"
-                } absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden`}
-              >
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
-              </button>
-              <nav
-                id="navbarCollapse"
-                className={`absolute right-4 top-full w-full max-w-[250px] px-6 py-5 shadow lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent ${
-                  !open && "hidden"
-                } `}
-              >
-                <ul className="block lg:flex">
-                  <ListItem NavLink="/#">Beranda</ListItem>
-                  <ListItem NavLink="/#">Cari Dokter</ListItem>
-                  <ListItem NavLink="/#">Adopsi</ListItem>
-                  <ListItem NavLink="/#">Tentang Kami</ListItem>
-                </ul>
-              </nav>
-            </div>
-            <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-              <div className="relative mr-4 flex items-center">
-                <span className="absolute left-2 text-gray-500 dark:text-gray-400">
-                  <i className="fas fa-search"></i>
-                </span>
-                <input
-                  type="text"
-                  className="w-full rounded-full border border-gray-300 bg-white px-10 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#DE9455] dark:border-gray-600 dark:text-white"
-                  placeholder="Search..."
-                />
-              </div>
-              <a
-                href="/#"
-                className="px-7 py-3 text-base font-medium text-dark hover:text-[#DE9455] dark:text-white"
-              >
-                Sign in
-              </a>
-
-              <a
-                href="/#"
-                className="ml-4 rounded-full bg-[#DE9455] px-7 py-3 text-base font-medium text-white hover:bg-[#D68B4B]"
-              >
-                Sign Up
-              </a>
-            </div>
+    <>
+      <section className="bg-gray-2 pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+        <div className="container">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <SingleCard
+              image="https://i.ibb.co/r2zns1m/image-01.jpg"
+              CardTitle="50+ Best creative website themes & templates"
+              titleHref="/#"
+              btnHref="/#"
+              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              Button="View Details"
+            />
+            <SingleCard
+              image="https://i.ibb.co/0nbbWM9/image-02-1.jpg"
+              CardTitle="Creative Card Component designs graphic elements"
+              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              Button="View Details"
+            />
+            <SingleCard
+              image="https://i.ibb.co/dL9fH7N/image-03-1.jpg"
+              CardTitle="The ultimate UX and UI guide to card design"
+              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              Button="View Details"
+            />
           </div>
         </div>
-      </div>
-    </header>
+      </section>
+    </>
   );
 };
 
-export default Navbar;
+export default Card;
 
-const ListItem = ({ children, NavLink }) => {
+const SingleCard = ({
+  image,
+  Button,
+  CardDescription,
+  CardTitle,
+  titleHref,
+  btnHref,
+}) => {
   return (
-    <li>
-      <a
-        href={NavLink}
-        className="flex py-2 text-base font-medium text-black hover:text-[#DE9455] dark:text-white dark:hover:text-[#DE9455] lg:ml-12 lg:inline-flex"
-      >
-        {children}
-      </a>
-    </li>
+    <>
+      {/*  */}
+      <div className="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+        <img src={image} alt="" className="w-full" />
+        <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+          <h3>
+            <a
+              href={titleHref ? titleHref : "/#"}
+              className="mb-4 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
+            >
+              {CardTitle}
+            </a>
+          </h3>
+          <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+            {CardDescription}
+          </p>
+
+          {Button && (
+            <a
+              href={btnHref ? btnHref : "#"}
+              className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
+            >
+              {Button}
+            </a>
+          )}
+        </div>
+      </div>
+      {/*  */}
+    </>
   );
 };
