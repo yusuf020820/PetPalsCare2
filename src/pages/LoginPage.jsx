@@ -13,7 +13,7 @@ const LoginPage = () => {
               <h1 className="" >Masuk Akun PetPals Care</h1>
             </div>
             <div className="py-4">
-              <input type="text" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" />
+              <input type="email" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" />
             </div>
             <div>
               <input type="password" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Kata Sandi" />
@@ -42,7 +42,7 @@ const LoginPage = () => {
               </a>
             </div>
             <div className='flex justify-center items-center '>
-              <a href="#" className='text-[#777]'>Masuk Sebagai Dokter Hewan</a>
+              <a href="/Login-dokter" className='text-[#777]'>Masuk Sebagai Dokter Hewan</a>
             </div>
           </div>
         </div>

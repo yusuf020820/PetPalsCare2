@@ -11,7 +11,7 @@ const LoginDokterPage = () => {
               <h1 className="" >Masuk Sebagai Dokter Hewan</h1>
             </div>
             <div className="py-4">
-              <input type="text" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="@email" />
+              <input type="email" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" />
             </div>
             <div>
               <input type="password" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Kata Sandi" />
@@ -35,10 +35,12 @@ const LoginDokterPage = () => {
             </div>
 
             <div className='p-4 flex justify-center items-center'>
+              <a href="/Daftar-dokter">
               <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold ">Daftar</button>
+              </a>
             </div>
             <div className='flex justify-center items-center '>
-              <a href="#" className='text-[#777] '>Masuk Sebagai Pemilik</a>
+              <a href="/Login-PetPalsCare" className='text-[#777] '>Masuk Sebagai Pemilik</a>
             </div>
           </div>
         </div>
