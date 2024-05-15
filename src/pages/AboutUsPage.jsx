@@ -614,7 +614,7 @@ const AboutUsPage = () => {
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
-                <span className="block mb-4 text-lg font-semibold text-custom-color">
+                <span className="block mb-4 text-lg font-bold text-custom-color">
                 Tentang PetPals Care
                 </span>
                 <h2 className="mb-5 text-3xl font-semibold text-dark sm:text-[28px]/[34px]">
