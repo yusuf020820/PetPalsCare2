@@ -618,7 +618,7 @@ const AboutUsPage = () => {
                 Tentang PetPals Care
                 </span>
                 <h2 className="mb-5 text-3xl font-semibold text-dark sm:text-[28px]/[34px]">
-                PetPals care adalah platform yang didedikasikan untuk meningkatkan kesejahteraan hewan peliharaan.
+                PetPals Care adalah platform yang didedikasikan untuk meningkatkan kesejahteraan hewan peliharaan.
                 </h2>
                 <p className="mb-5 text-base text-body-color dark:text-dark-6">
                 Di PetPals Care, kami melihat hewan peliharaan sebagai bagian integral dari keluarga Anda. 
