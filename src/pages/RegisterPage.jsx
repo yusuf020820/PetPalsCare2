@@ -5,17 +5,16 @@ const RegisterPage = () => {
     <>
       <div className="flex justify-center items-center">
         {/* kiri */}
-        <div className="w-1/2 h-screen bg-[#F7DBA7] flex justify-center items-center custom-border-radius">
+        <div className="w-1/2 h-screen bg-[#F7DBA7] flex justify-center items-center custom-border-radius rotate-180">
           <div className=''>
-            <div className='h-auto w-full max-w-72'>
-              <a href="/">
-              <img src={Logo} alt="Logo" />
-              </a>
-            </div>
-
-            <div className='p-4 flex justify-center items-center'>
+          <div className='p-4 flex justify-center items-center rotate-180'>
               <a href="/Login-PetPalsCare">
               <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold ">Masuk </button>
+              </a>
+            </div>
+            <div className='h-auto w-full max-w-72 rotate-180'>
+              <a href="/">
+              <img src={Logo} alt="Logo" />
               </a>
             </div>
           </div>
