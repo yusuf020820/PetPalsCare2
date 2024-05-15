@@ -60,11 +60,11 @@ const Footer = () => {
               </div>
             </div>
 
-            <LinkGroup header="Resources">
-              <NavLink link="/#" label="SaaS Development" />
-              <NavLink link="/#" label="Our Products" />
-              <NavLink link="/#" label="User Flow" />
-              <NavLink link="/#" label="User Strategy" />
+            <LinkGroup header="Tautan">
+              <NavLink link="/#" label="Beranda" />
+              <NavLink link="/#" label="Cari Dokter" />
+              <NavLink link="/#" label="Adopsi" />
+              <NavLink link="/#" label="Tentang Kami" />
             </LinkGroup>
             <LinkGroup header="Company">
               <NavLink link="/#" label="About TailGrids" />
