@@ -620,12 +620,12 @@ const AboutUsPage = () => {
                 <h2 className="mb-5 text-3xl font-semibold text-dark sm:text-[28px]/[34px]">
                 PetPals Care adalah platform yang didedikasikan untuk meningkatkan kesejahteraan hewan peliharaan.
                 </h2>
-                <p className="mb-5 text-base text-body-color dark:text-dark-6">
+                <p className="mb-5 text-base text-black dark:text-black">
                 Di PetPals Care, kami melihat hewan peliharaan sebagai bagian integral dari keluarga Anda. 
                 Dengan komitmen kami terhadap kesejahteraan mereka, kami menyediakan sumber informasi kesehatan yang andal dan layanan adopsi yang aman. 
                 Dari mencari dokter hewan terdekat hingga konsultasi telemedicine, kami hadir untuk memudahkan Anda dalam memberikan perawatan terbaik bagi teman berbulu Anda.
                 </p>
-                <p className="mb-8 text-base text-body-color dark:text-dark-6">
+                <p className="mb-8 text-base text-body-color dark:text-black">
                 Tim kami terdiri dari individu yang bersemangat untuk inovasi, siap membantu Anda dalam setiap langkah perjalanan Anda sebagai pemilik hewan peliharaan. 
                 Kami memprioritaskan layanan yang ramah, informatif, dan berorientasi pada kebutuhan Anda dan hewan peliharaan Anda. 
                 Bergabunglah dengan PetPals Care hari ini dan mari kita bersama-sama menciptakan kehidupan yang lebih baik untuk teman-teman berbulu kita!
