@@ -1,12 +1,14 @@
 import Navbar from "../Components/Navbar"
 import Footer from "../Components/Footer"
-import PopUpPosting from "../pages/PopUpPosting";
+import PopUpKonfirmasi from "../pages/PopUpKonfirmasi";
+
 
 const HomepageBefore = () => {
   return (
     <>
-    <Navbar/>
-    <Footer/>
+    {/* <Navbar/>
+    <Footer/> */}
+    <PopUpKonfirmasi/>
 
     </>
   )
