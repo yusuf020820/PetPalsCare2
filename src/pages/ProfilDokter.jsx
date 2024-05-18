@@ -7,7 +7,7 @@ const ProfilDokter = () => {
     <>
       <Navbar />
       <div className="bg-white-light-2 w-full h-screen flex justify-center items-center">
-        <div className="bg-white w-1/3 h-screen p-8">
+        <div className="w-1/3 h-screen p-8">
           <ul>
             <li className="p-2">Profil Saya</li>
             <li className="p-2">Daftar Alamat</li>
@@ -17,10 +17,10 @@ const ProfilDokter = () => {
           </ul>
         </div>
 
-        <div className="bg-white w-full h-screen p-12">
+        <div className="w-full h-auto p-12">
           <div className="bg-white p-10 rounded-xl w-full h-auto shadow-2xl">
             <h1 className="py-4 font-bold text-1xl" > Profil Saya</h1>
-            <div className="flex justify-start items-center gap-4 pt-6">
+            <div className="flex justify-start items-center gap-6 pt-6">
               <div className=" w-[100px] h-[100px] bg-orange-400 rounded-full flex justify-center items-center" >
                 <p>IMG</p>
               </div>
@@ -30,16 +30,19 @@ const ProfilDokter = () => {
                 <p>Dokter Hewan</p>
               </div>
             </div>
-            <div classname="flex justify-start gap-8 items-center bg-red w-full" >
+
               <div>
+                
+              </div>
+            <div className=" h-auto w-full flex justify-start items-center gap-28 py-4" >
+              <div className=" py-2">
                 <p>Umur</p>
                 <p>27</p>
               </div>
-              <div className="py-4">
+              <div className="">
                 <p>Jenis Kelamin</p>
                 <p>Laki-laki</p>
               </div>
-
             </div>
             <div className="py-4">
               <p>Nomor Handphone</p>
