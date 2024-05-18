@@ -30,8 +30,8 @@ const ProfilDokter = () => {
                 <p>Dokter Hewan</p>
               </div>
             </div>
-            <div className=" h-1/2 flex justify-start gap-8 items-center  w-full h-auto gap-28">
-            <div className="py-4">
+            <div classname="flex justify-start gap-8 items-center bg-red w-full" >
+              <div>
                 <p>Umur</p>
                 <p>27</p>
               </div>
@@ -39,6 +39,7 @@ const ProfilDokter = () => {
                 <p>Jenis Kelamin</p>
                 <p>Laki-laki</p>
               </div>
+
             </div>
             <div className="py-4">
               <p>Nomor Handphone</p>
