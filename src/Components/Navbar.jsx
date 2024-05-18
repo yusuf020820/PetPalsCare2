@@ -16,15 +16,15 @@ const Navbar = () => {
           </div>
 
           {/* Nav Links */}
-          <div className="hidden md:flex space-x-10">
-            <a href="/" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Beranda</a>
-            <a href="/Daftar-dokter-hewan" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Cari Dokter</a>
-            <a href="/Adopsi-hewan" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Adopsi</a>
-            <a href="/Tentang-PetPalsCare" className="py-4 px-2 text-black font-medium hover:text-[#D68B4B] transition duration-300">Tentang Kami</a>
+          <div className="hidden md:flex space-x-10 font-sans">
+            <a href="/" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Beranda</a>
+            <a href="/Daftar-dokter-hewan" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Cari Dokter</a>
+            <a href="/Adopsi-hewan" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Adopsi</a>
+            <a href="/Tentang-PetPalsCare" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Tentang Kami</a>
           </div>
 
           {/* Search and Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-3 font-sans">
             <div className="relative">
               <input 
                 type="text" 
@@ -35,8 +35,8 @@ const Navbar = () => {
                 <i className="fas fa-search text-gray-500"></i>
               </span>
             </div>
-            <a href="/Daftar-PetPalsCare" className="py-2 px-4 bg-[#F7DBA7] border border-[#DE9455] text-[#DE9455] rounded-full hover:bg-[#DE9455] hover:text-white transition duration-300">Daftar</a>
-            <a href="/Login-PetPalsCare" className="py-2 px-4 bg-[#DE9455] text-white rounded-full hover:bg-[#D68B4B] transition duration-300">Masuk</a>
+            <a href="/Daftar-PetPalsCare" className="py-2 px-4 bg-[#F7DBA7] border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#ED9455] hover:text-white transition duration-300">Daftar</a>
+            <a href="/Login-PetPalsCare" className="py-2 px-4 bg-[#ED9455] text-white rounded-full hover:bg-[#e28d51] transition duration-300">Masuk</a>
           </div>
 
           {/* Mobile menu button */}
