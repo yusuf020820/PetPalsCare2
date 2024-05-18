@@ -24,6 +24,7 @@ import DetailDokterCowo from "./pages/DetailDokterCowo";
 import DetailDokterCewe from "./pages/DetailDokterCewe";
 import DokterHewanPage from "./pages/DokterHewanPage";
 
+
 function App() {
   return (
     <div>
@@ -49,17 +50,11 @@ function App() {
         <Route path="/Detail-dokter-wanita" Component={DetailDokterCewe} />
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />
       </Routes>
+
     </div>
 
     
   );
-  {
-    /* <Navbar/>
-    <Notfound/>
-    <Footer/> */
-
-    
-  }
 }
 
 export default App;

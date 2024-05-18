@@ -71,3 +71,9 @@ button:focus-visible {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Contoh CSS tambahan */
+.custom-border-radius {
+  border-top-left-radius: 160px;
+  border-bottom-left-radius: 160px;
+}
