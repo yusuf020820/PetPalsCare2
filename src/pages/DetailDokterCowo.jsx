@@ -1,5 +1,7 @@
+import DokterCowo from '../assets/images/DokterCowo.png'
 import React from 'react';
 import Navbar from "../Components/Navbar";
+import Footer from '../Components/Footer';
 
 const posts = [
   {
@@ -26,7 +28,7 @@ const Example = () => {
             <article key={post.id} className="flex flex-col items-start justify-between bg-white shadow-lg rounded-lg p-6 w-full">
               <div className="flex flex-col sm:flex-row sm:items-start sm:gap-x-6 mt-3 w-full">
                 {post.author.imageUrl && (
-                  <img src={post.author.imageUrl} alt="" className="h-40 w-40 rounded-full bg-gray-50" />
+                  <img src={DokterCowo} alt="" className="h-40 w-40 rounded-full bg-gray-50" />
                 )}
                 <div className="flex flex-col mt-3 sm:mt-0 w-full">
                   <h3 className="text-lg font-semibold leading-6 text-gray-900">
@@ -62,7 +64,8 @@ const DetailDokterCowo = () => {
     <>
       <Navbar />
       <Example />
-    </>
+      <Footer/>
+      </>
   );
 };
 

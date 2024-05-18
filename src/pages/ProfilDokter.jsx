@@ -13,7 +13,7 @@ const ProfilDokter = () => {
             <li className="p-2">Daftar Alamat</li>
             <li className="p-2">Favorit</li>
             <li className="p-2">Pasien</li>
-            <li className="py-8 px-2"> <a href="http://localhost:5173/Beranda"> keluar</a></li>
+            <li className="py-8 px-2"> <a href="http://localhost:5173/Beranda"> Keluar</a></li>
           </ul>
         </div>
 
@@ -22,7 +22,7 @@ const ProfilDokter = () => {
             <h1 className="py-4 font-bold text-1xl" > Profil Saya</h1>
             <div className="flex justify-start items-center gap-4 pt-6">
               <div className=" w-[100px] h-[100px] bg-orange-400 rounded-full flex justify-center items-center" >
-                <p>IMG</p>
+                <p>MA</p>
               </div>
 
               <div>
@@ -42,19 +42,19 @@ const ProfilDokter = () => {
             </div>
             <div className="py-4">
               <p>Nomor Handphone</p>
-              <p>+0123456789</p>
+              <p>+623244548799</p>
             </div>
             <div className="py-4">
               <p>Email</p>
-              <p>muhammadAli</p>
+              <p>muhammadAli97@gmail.com</p>
             </div>
             <div className="py-4">
               <p>Lulusan</p>
-              <p>Pendidikan Profesi Dokter</p>
+              <p>Pendidikan Profesi Dokter, Fakultas Hewan,Universitas Syiah Kuala</p>
             </div>
             <div className="py-4">
               <p>Spesialis</p>
-              <p>Hewan domestik dan eksotik</p>
+              <p>Hewan Domestik dan Eksotik</p>
             </div>
             <div className="">
               <p>Biaya</p>
