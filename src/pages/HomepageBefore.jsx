@@ -8,7 +8,7 @@ const HomepageBefore = () => {
     <>
     {/* <Navbar/>
     <Footer/> */}
-    <PopUpKonfirmasi/>
+    {/* <PopUpKonfirmasi/> */}
 
     </>
   )
