@@ -6,7 +6,7 @@ const ProfilDokter = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-white-light-2 w-full h-auto flex justify-start">
+      <div className="bg-white-light-2 w-full h-auto flex justify-start container">
         <div className=" w-1/3 h-screen p-8  ">
           <ul>
             <li className="p-2">Profil Saya</li>
