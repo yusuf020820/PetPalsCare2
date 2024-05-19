@@ -5,9 +5,9 @@ const PostingHewanPage = () => {
   return (
    <>
    <Navbar/>
-   <div className="bg-red-light-2 w-full h-screen flex justify-center items-center">
+   <div className=" flex justify-center items-center container">
 
-    <div className="bg-white w-1/3 h-screen p-8">
+    <div className="w-1/3 h-screen p-8">
       <ul>
         <li className="p-2">Profil Saya</li>
         <li className="p-2">Daftar Alamat</li>
@@ -16,7 +16,7 @@ const PostingHewanPage = () => {
         <li className="p-2">Posting Hewan Saya</li>
   </ul>
     </div>
-    <div className="bg-white w-full h-screen p-12">
+    <div className=" w-full h-screen p-12">
       <div className="bg-white p-4 rounded-xl w-full h-full shadow-2xl">
         <h1 className="p-4"> Postingan Hewan Saya </h1>
         <div className="px-4 py-2 ">

@@ -1,8 +1,8 @@
+import React from 'react'
+
 const PetDetailPage = () => {
   return (
-    <div>
-      
-    </div>
+    <div>PetDetailPage</div>
   )
 }
 

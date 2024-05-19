@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="mb-10 w-full">
                 <a href="/#" className="mb-6 inline-block max-w-[160px]">
                   <img
-                    src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg"
+                    src={Logo}
                     alt="logo"
                     className="max-w-full dark:hidden"
                   />
@@ -66,17 +66,9 @@ const Footer = () => {
               <NavLink link="/#" label="Adopsi" />
               <NavLink link="/#" label="Tentang Kami" />
             </LinkGroup>
-            <LinkGroup header="Company">
-              <NavLink link="/#" label="About TailGrids" />
-              <NavLink link="/#" label="Contact & Support" />
-              <NavLink link="/#" label="Success History" />
-              <NavLink link="/#" label="Setting & Privacy" />
-            </LinkGroup>
-            <LinkGroup header="Quick Links">
-              <NavLink link="/#" label="Premium Support" />
-              <NavLink link="/#" label="Our Services" />
-              <NavLink link="/#" label="Know Our Team" />
-              <NavLink link="/#" label="Download App" />
+            <LinkGroup header="Kontak">
+              <NavLink link="/#" label="Kota Kediri, Jawa Timur" />
+              <NavLink link="/#" label="petpalscare@gmail.com" />
             </LinkGroup>
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
