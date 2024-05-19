@@ -23,6 +23,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import DetailDokterCowo from "./pages/DetailDokterCowo";
 import DetailDokterCewe from "./pages/DetailDokterCewe";
 import DokterHewanPage from "./pages/DokterHewanPage";
+import PopUpKonfirmasi from "./pages/PopUpKonfirmasi";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Route path="/Detail-dokter-pria" Component={DetailDokterCowo} />
         <Route path="/Detail-dokter-wanita" Component={DetailDokterCewe} />
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />
+        <Route path="/Pop-Up-Konfirmasi" Component={PopUpKonfirmasi} />
       </Routes>
 
     </div>

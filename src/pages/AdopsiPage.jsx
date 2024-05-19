@@ -13,6 +13,8 @@ const data = [
   { id: 1, JenisHewan: "Anjing Shiba Inu", Nama: "Cleo", Kelamin: "Betina", Usia: 2, imageUrl: "https://via.placeholder.com/150" },
   { id: 1, JenisHewan: "Anjing Shiba Inu", Nama: "Cleo", Kelamin: "Betina", Usia: 2, imageUrl: "https://via.placeholder.com/150" },
   { id: 1, JenisHewan: "Anjing Shiba Inu", Nama: "Cleo", Kelamin: "Betina", Usia: 2, imageUrl: "https://via.placeholder.com/150" },
+  { id: 1, JenisHewan: "Anjing Shiba Inu", Nama: "Cleo", Kelamin: "Betina", Usia: 2, imageUrl: "https://via.placeholder.com/150" },
+  { id: 1, JenisHewan: "Anjing Shiba Inu", Nama: "Cleo", Kelamin: "Betina", Usia: 2, imageUrl: "https://via.placeholder.com/150" },
 ]
 
 

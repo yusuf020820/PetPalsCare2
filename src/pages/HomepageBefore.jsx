@@ -15,6 +15,7 @@ const data = [
 ]
 
 
+
 const Card = ({Imgurl, text , Description}) => {
   return (
     <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
