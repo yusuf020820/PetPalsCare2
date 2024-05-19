@@ -28,7 +28,7 @@ const PostingHewanPage = () => {
   return (
     <>
       <Navbar />
-      <div className=" flex justify-center items-center container">
+      <div className=" flex justify-center items-center ">
 
         <div className="w-1/3 h-screen p-8">
           <ul>
