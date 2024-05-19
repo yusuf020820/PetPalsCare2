@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaMapMarkerAlt, FaClock, FaHandshake } from 'react-icons/fa';
 
 const chatData = [
@@ -17,7 +17,7 @@ const ChatMessage = ({ sender, message, time }) => {
   const isUser = sender === 'user';
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
-      <div className={`max-w-xs p-4 rounded-lg shadow-md ${isUser ? 'bg-yellow-100' : 'bg-gray-100'}`}>
+      <div className={`max-w-2xl p-4 rounded-lg shadow-md ${isUser ? 'bg-yellow-100' : 'bg-gray-100'}`}>
         <p>{message}</p>
         <p className="text-xs text-gray-500 text-right">{time}</p>
       </div>
@@ -26,9 +26,25 @@ const ChatMessage = ({ sender, message, time }) => {
 };
 
 const ChatPemilikPage = () => {
+  const [messages, setMessages] = useState(chatData);
+  const [newMessage, setNewMessage] = useState('');
+
+  const handleSendMessage = () => {
+    if (newMessage.trim() !== '') {
+      const newChat = {
+        id: messages.length + 1,
+        sender: 'user',
+        message: newMessage,
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+      setMessages([...messages, newChat]);
+      setNewMessage('');
+    }
+  };
+
   return (
-    <div className="bg-gray-100 min-h-screen p-6">
-      <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+    <div className="bg-gray-100 min-h-screen p-6 flex flex-col">
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden flex-1 flex flex-col">
         <div className="p-6 border-b">
           <h2 className="text-lg font-bold mb-2">Welcome to PetPals Care!</h2>
           <div className="flex items-center mb-2">
@@ -47,10 +63,25 @@ const ChatPemilikPage = () => {
             </div>
           </div>
         </div>
-        <div className="p-6 space-y-4">
-          {chatData.map((chat) => (
+        <div className="p-6 space-y-4 flex-1 overflow-y-auto">
+          {messages.map((chat) => (
             <ChatMessage key={chat.id} sender={chat.sender} message={chat.message} time={chat.time} />
           ))}
+        </div>
+        <div className="p-4 border-t flex items-center">
+          <input
+            type="text"
+            className="flex-1 p-2 border rounded-lg"
+            placeholder="Tulis pesan..."
+            value={newMessage}
+            onChange={(e) => setNewMessage(e.target.value)}
+          />
+          <button
+            className="ml-2 p-2 bg-[#ED9455] text-white rounded-lg"
+            onClick={handleSendMessage}
+          >
+            Kirim
+          </button>
         </div>
       </div>
     </div>
