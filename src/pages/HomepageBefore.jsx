@@ -1,10 +1,33 @@
 import React from 'react';
 import Navbar from "../Components/Navbar";
 import heroImage from "../assets/images/hero-home.jpg";
-import vh1 from "../assets/images/vectorhome1.png";
-import vh2 from "../assets/images/vectorhome2.png";
-import vh3 from "../assets/images/vectorhome3.png";
-import vh4 from "../assets/images/vectorhome4.png";
+import image1 from '../assets/images/vectorhome1.png';
+import image2 from "../assets/images/vectorhome2.png";
+import image3 from "../assets/images/vectorhome3.png";
+import image4 from "../assets/images/vectorhome4.png";
+import { Description } from '@headlessui/react';
+
+const data = [
+  {id:1,Imgurl:image1,text:"Lokasi Dokter Hewan", Description:"Kemudahan untuk menemukan dokter hewan terdekat dengan cepat."},
+  {id:2,Imgurl:image2,text:"Konsultasi Dokter", Description:"Berkonsultasi dengan dokter hewan secara online untuk memperoleh saran penanganan."},
+  {id:3,Imgurl:image3,text:"Adopsi Hewan", Description:"Menjelajahi daftar-daftar hewan yang anda inginkan untuk dipelihara."},
+  {id:4,Imgurl:image4,text:"Temukan Pengadopsi", Description:"Anda dapat mengunggah profil hewan anda untuk menemukan pengadopsi yang cocok."},
+]
+
+
+const Card = ({Imgurl, text , Description}) => {
+  return (
+    <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
+    <div className="flex items-start justify-start mb-4">
+    <img src={Imgurl} alt={text} className="h-10"/>
+    </div>
+    <h2 className="text-xl font-semibold mb-2">{text}</h2>
+    <p className="text-gray-600">{Description}</p>
+    </div>
+  )
+}
+
+
 
 const HomepageBefore = () => {
   return (
@@ -29,45 +52,16 @@ const HomepageBefore = () => {
       </div>
 
 
-      <div className="max-w-screen-xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        {/* Card 1 */}
-        <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
-        <div className="flex items-start justify-start mb-4">
-        <img src={vh1} alt="Icon" className="h-10"/>
-        </div>
-        <h2 className="text-xl font-semibold mb-2">Lokasi Dokter Hewan</h2>
-        <p className="text-gray-600">Kemudahan untuk menemukan dokter hewan terdekat dengan cepat.</p>
-        </div>
-
-        {/* Card 2 */}
-        <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
-        <div className="flex items-start justify-start mb-4">
-        <img src={vh2} alt="Icon" className="h-10"/>
-        </div>
-        <h2 className="text-xl font-semibold mb-2">Konsultasi Dokter</h2>
-        <p className="text-gray-600">Berkonsultasi dengan dokter hewan secara online untuk memperoleh saran penanganan.</p>
-        </div>
-
-        {/* Card 3 */}
-        <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
-        <div className="flex items-start justify-start mb-4">
-        <img src={vh3} alt="Icon" className="h-10"/>
-        </div>
-        <h2 className="text-xl font-semibold mb-2">Adopsi Hewan</h2>
-        <p className="text-gray-600">Menjelajahi daftar-daftar hewan yang anda inginkan untuk dipelihara.</p>
-        </div>
-
-        {/* Card 4 */}
-        <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
-        <div className="flex items-start justify-start mb-4">
-        <img src={vh4} alt="Icon" className="h-10"/>
-        </div>
-        <h2 className="text-xl font-semibold mb-2">Temukan Pengadopsi</h2>
-        <p className="text-gray-600">Anda dapat mengunggah profil hewan anda untuk menemukan pengadopsi yang cocok.</p>
-        </div>
+     
+      <div className="container mx-auto p-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {data.map((item) => (
+                  <Card key={item.id} Imgurl={item.Imgurl} text={item.text} Description={item.Description} />
+                ))}
+              </div>
+            </div>
 
        
-      </div>
     </>
   );
 }
