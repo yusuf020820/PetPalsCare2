@@ -38,6 +38,7 @@ hover:bg-[#D68B4B] p-2 rounded-lg">Ubah Data</button>
               <button className=" bg-[#62c018] p-2 rounded-md text-white">Teradopsi</button>
             </div>
           </div> 
+          
         </div>
       </div>
     </div>
