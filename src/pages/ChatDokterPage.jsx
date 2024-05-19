@@ -199,6 +199,8 @@ const ChatDokterPage = () => {
       </div>
       </div>
     </div>
+  )
 };
+
 
 export default ChatDokterPage
