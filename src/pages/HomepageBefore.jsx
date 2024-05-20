@@ -8,6 +8,7 @@ import image4 from "../assets/images/vectorhome4.png";
 import doktercwo from "../assets/images/DokterCowo.png";
 import doktercwe from "../assets/images/DokterCewe.png";
 import vaksinKucing from '../assets/images/vaksinimg.jpg';
+import adoptionBgImage from '../assets/images/banner2.png';
 
 const data = [
   { id: 1, Imgurl: image1, text: "Lokasi Dokter Hewan", description: "Kemudahan untuk menemukan dokter hewan terdekat dengan cepat." },
@@ -103,9 +104,8 @@ const HomepageBefore = () => {
             Bersama-sama, kita berkomitmen untuk mengubah dan memperbaiki kesejahteraan hewan serta menciptakan kehidupan yang penuh kebahagiaan bagi mereka!
           </div>
           <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#f89b59] transition duration-300 rounded-full flex justify-center items-center mt-10">
-            <span className="text-white">Explore Now</span>
+            <span className="text-white">Jelajahi Sekarang</span>
           </button>
-
         </div>
       </div>
 
@@ -138,25 +138,38 @@ const HomepageBefore = () => {
       </div>
 
       <div className="container mx-auto p-8">
-  <div className="flex justify-between items-center mb-10">
-    <div>
-      <div className="text-black text-base font-normal mb-1">Ingin berkonsultasi dengan dokter hewan terpercaya?</div>
-      <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">Rekomendasi Dokter Hewan</div>
-    </div>
-
-    <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center mt-10">
+        <div className="flex justify-between items-center mb-10">
+          <div>
+            <div className="text-black text-base font-normal mb-1">Ingin berkonsultasi dengan dokter hewan terpercaya?</div>
+            <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">Rekomendasi Dokter Hewan</div>
+          </div>
+          <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
             <span className="text-white">Tampilkan Lainnya</span>
           </button>
-  </div>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    {doctorData.map((doctor) => (
-      <DoctorCard key={doctor.id} imageUrl={doctor.imageUrl} name={doctor.name} specialty={doctor.specialty} experience={doctor.experience} />
-    ))}
-  </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {doctorData.map((doctor) => (
+            <DoctorCard key={doctor.id} imageUrl={doctor.imageUrl} name={doctor.name} specialty={doctor.specialty} experience={doctor.experience} />
+          ))}
+        </div>
+      </div>
 
+      {/* New Section */}
+      <div className="relative w-full h-screen bg-cover bg-center mt-10" style={{ backgroundImage: `url(${adoptionBgImage})` }}>
+        <div className="absolute left-[130px] top-[120px] w-full lg:w-1/2">
+          <h2 className="text-4xl font-bold mb-10 leading-tight font">Manfaat Mempelihara Hewan Membawa Kebahagiaan dalam Kehidupan Anda</h2>
+          <div className="text-gray-700 space-y-4 leading-relaxed">
+            <p>
+              Hewan peliharaan tidak hanya menjadi bagian dari keluarga, tetapi juga menjadi teman sejati yang menghadirkan keceriaan dan kenangan tak terlupakan.
+            </p>
+            <p>
+              Setiap hewan yang diadopsi mendapatkan kesempatan kedua untuk menciptakan kenangan indah, bersama keluarga yang penuh kasih sayang. Adopsi adalah tindakan nyata yang membantu mengurangi jumlah hewan terlantar di komunitas kita. Bergabunglah dengan kami hari ini dalam misi menyelamatkan dan memberikan cinta kepada mereka yang membutuhkan, melalui adopsi hewan peliharaan!
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default HomepageBefore;
