@@ -43,12 +43,12 @@ const DokterHewanPage = () => {
       <Navbar />
       <div className='w-full h-auto pt-8 px-20 container relative'>
         <img src={DokterHewan} alt="Dokter Hewan" className="w-auto h-auto relative" />
-        <div className="absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 text-white px-12 py-4 text-left w-full max-w-full">
+        <div className="absolute top-1/2 left-3/4 transform -translate-x-1/4 -translate-y-1/2 text-white px-12 py-4 text-left w-full max-w-full">
           <h1 className="text-3xl font-bold mb-2">Temukan Dokter Hewan:</h1>
           <h2 className="text-xl font-semibold mb-2">Solusi Terbaik</h2>
           <h2 className="text-xl font-semibold mb-2">untuk Kesehatan Hewan</h2>
-          <h4 className="text-2xs mb-2" style={{ fontSize: '0.75rem' }}>Layanan Kesehatan Berkualitas yang Memberikan Perhatian</h4>
-          <h4 className="text-2xs mb-2" style={{ fontSize: '0.75rem' }}>Terbaik untuk Hewan Peliharaan Anda.</h4>
+          <h4 className="text-2xs mb-2" style={{ fontSize: '0.5rem' }}>Layanan Kesehatan Berkualitas yang Memberikan Perhatian</h4>
+          <h className="text-2xs mb-2" style={{ fontSize: '0.5rem' }}>Terbaik untuk Hewan Peliharaan Anda.</h>
         </div>
       </div>
       <div className='w-full h-auto pt-8 px-20 container'>
