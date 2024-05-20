@@ -30,7 +30,7 @@ const PostingHewanPage = () => {
   return (
     <>
       <Navbar />
-      <div className=" flex justify-center items-center ">
+      <div className=" flex justify-center items-start ">
 
         <div className="w-1/3 h-screen p-8">
           <ul>

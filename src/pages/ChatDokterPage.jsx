@@ -20,7 +20,7 @@ const ChatMessage = ({ message, time }) => {
   );
 };
 
-const ProfilUserChat = () => {
+const ChatDokterPage = () => {
   return (
     <div className="flex min-h-screen">
       <div className="w-1/4 bg-white border-r">
@@ -84,4 +84,4 @@ const ProfilUserChat = () => {
   );
 };
 
-export default ProfilUserChat;
+export default ChatDokterPage;
