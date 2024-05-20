@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaClock, FaHandshake } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaClock, FaHandshake, FaCamera } from 'react-icons/fa';
 
 const chatData = [
   { id: 1, sender: 'user', message: 'Selamat siang bang, saya berminat untuk adopsi anjing nya', time: '12:25' },
@@ -28,6 +28,7 @@ const ChatMessage = ({ sender, message, time }) => {
 const ChatPemilikPage = () => {
   const [messages, setMessages] = useState(chatData);
   const [newMessage, setNewMessage] = useState('');
+  const [uploadedPhoto, setUploadedPhoto] = useState(null);
 
   const handleSendMessage = () => {
     if (newMessage.trim() !== '') {
@@ -39,6 +40,18 @@ const ChatPemilikPage = () => {
       };
       setMessages([...messages, newChat]);
       setNewMessage('');
+      setUploadedPhoto(null); // Reset uploaded photo after sending message
+    }
+  };
+
+  const handlePhotoUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setUploadedPhoto(reader.result);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -67,8 +80,23 @@ const ChatPemilikPage = () => {
           {messages.map((chat) => (
             <ChatMessage key={chat.id} sender={chat.sender} message={chat.message} time={chat.time} />
           ))}
+          {uploadedPhoto && (
+            <div className="flex justify-end mb-4">
+              <img src={uploadedPhoto} alt="Uploaded" className="max-w-xs rounded-lg shadow-md" />
+            </div>
+          )}
         </div>
         <div className="p-4 border-t flex items-center">
+          <label htmlFor="file-upload" className="flex items-center mr-2">
+            <input
+              id="file-upload"
+              type="file"
+              className="hidden"
+              accept="image/*"
+              onChange={handlePhotoUpload}
+            />
+            <FaCamera className="text-gray-600 cursor-pointer" />
+          </label>
           <input
             type="text"
             className="flex-1 p-2 border rounded-lg"

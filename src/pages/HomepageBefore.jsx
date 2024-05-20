@@ -75,7 +75,7 @@ const doctorData = [
 const petData = [
   {
     id: 1,
-    ras: "Kucing Anggora",
+    ras: "Kucing Anggora jawa sumatra sunda hahahaha ",
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
@@ -88,7 +88,11 @@ const petData = [
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
+<<<<<<< HEAD
     imageUrl: "path/to/image1.jpg",
+=======
+    imageUrl: "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp"
+>>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
   },
   {
     id: 3,
@@ -96,15 +100,23 @@ const petData = [
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
+<<<<<<< HEAD
     imageUrl: "path/to/image1.jpg",
+=======
+    imageUrl: "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp"
+>>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
   },
   {
     id: 4,
-    ras: "Kucing Anggora",
+    ras: "Kucing Anggora Persia",
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
+<<<<<<< HEAD
     imageUrl: "path/to/image1.jpg",
+=======
+    imageUrl: "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp"
+>>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
   },
 ];
 
@@ -160,6 +172,7 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
 
 const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
   return (
+<<<<<<< HEAD
     <div className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
       <div className="w-full h-52 bg-white rounded-[10px] overflow-hidden flex justify-center items-center">
         <img className="w-full h-full object-cover" src={imageUrl} alt={nama} />
@@ -177,15 +190,28 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
               <div className="w-[171px] h-[18px] text-gray-500 text-xs font-normal">
                 {ras}
               </div>
+=======
+    <div className="p-2 rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
+      <div className="w-full h-52 bg-white rounded-[10px] overflow-hidden flex justify-center items-center">
+        <img className="w-full h-full object-cover" src={imageUrl} alt={nama} />
+      </div>
+      <div className=" justify-start items-start gap-2.5 flex h-auto w-full">
+        <div className="flex-col justify-start items-start gap-1 flex p-2 w-full">
+          <div className="self-stretch text-slate-900 text-xl font-normal leading-10">{nama}</div>
+          <div className="self-stretch justify-start items-start gap-1 inline-flex ">
+            <div className="justify-start items-start gap-8 flex w-full">
+              <div className="w-1/2 h-auto text-gray-500 text-xs font-black ">Ras Hewan:</div>
+              <div className="w-1/2 h-auto text-gray-500 text-xs font-normal line-clamp-2">{ras}</div>
+>>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
             </div>
           </div>
-          <div className="justify-start items-start gap-1.5 inline-flex">
-            <div className="text-gray-500 text-xs font-black">Kelamin:</div>
-            <div className="text-gray-500 text-xs font-normal">{kelamin}</div>
+          <div className="justify-start items-start gap-8 flex w-full">
+            <div className="w-1/2 h-auto text-gray-500 text-xs font-black">Kelamin:</div>
+            <div className="w-1/2 h-auto text-gray-500 text-xs font-normal line-clamp-2">{kelamin}</div>
           </div>
-          <div className="justify-start items-start gap-1.5 inline-flex">
-            <div className="text-gray-500 text-xs font-black">Usia:</div>
-            <div className="text-gray-500 text-xs font-normal">{usia}</div>
+          <div className="justify-start items-start gap-8 flex w-full">
+            <div className="w-1/2 h-auto text-gray-500 text-xs font-black">Usia:</div>
+            <div className="w-1/2 h-auto text-gray-500 text-xs font-normal line-clamp-2">{usia}</div>
           </div>
         </div>
         <button className="self-stretch px-2.5 pt-1.5 pb-1 bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
