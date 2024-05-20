@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaUser, FaMapMarkerAlt, FaHeart, FaSignOutAlt, FaPaperPlane } from 'react-icons/fa';
 
 const patients = [
   { id: 1, name: 'Wira Wicaksana', message: 'Dok! Anjing saya mau vaksin 🩺', unread: true },
-  { id: 2, name: 'Agus Septianto', message: 'ada yang bisa saya bantu?', unread: false },
-  { id: 3, name: 'Nining Sumaningsih', message: 'Dok, kucing saya sering MUNTAH 🩺', unread: true },
+  { id: 2, name: 'Agus Septianto', message: 'Ada yang bisa saya bantu?', unread: false },
+  { id: 3, name: 'Nining Sumaningsih', message: 'Dok, kucing saya sering muntah 🩺', unread: true },
   { id: 4, name: 'Yanto Kusuma Jaya', message: 'Dok, kucing saya sering nyakar saya 🩺', unread: true },
   { id: 5, name: 'Sinta Amelia', message: 'Dok, kucing saya sering sakit akhir-akhir ini 🩺', unread: false },
 ];
@@ -21,6 +21,22 @@ const ChatMessage = ({ message, time }) => {
 };
 
 const ChatDokterPage = () => {
+  const [patientPhotos, setPatientPhotos] = useState({});
+
+  const handleFileUpload = (event, patientId) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setPatientPhotos((prevPhotos) => ({
+          ...prevPhotos,
+          [patientId]: reader.result,
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="flex min-h-screen">
       <div className="w-1/4 bg-white border-r">
@@ -56,13 +72,24 @@ const ChatDokterPage = () => {
                 className={`p-4 flex items-center justify-between ${patient.unread ? 'bg-orange-100' : ''} cursor-pointer hover:bg-gray-200`}
               >
                 <div className="flex items-center">
-                  <img src="https://via.placeholder.com/50" alt={patient.name} className="w-12 h-12 rounded-full mr-4" />
+                  <img
+                    src={patientPhotos[patient.id] || "https://via.placeholder.com/50"}
+                    alt={patient.name}
+                    className="w-12 h-12 rounded-full mr-4"
+                  />
                   <div>
                     <h3 className="font-semibold">{patient.name}</h3>
                     <p className="text-sm text-gray-500">{patient.message}</p>
                   </div>
                 </div>
                 {patient.unread && <span className="text-red-500 text-sm font-semibold">●</span>}
+                {/* Menghilangkan label "Choose File" */}
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(event) => handleFileUpload(event, patient.id)}
+                  className="hidden"
+                />
               </div>
             ))}
           </div>
@@ -71,12 +98,7 @@ const ChatDokterPage = () => {
               <ChatMessage message="Dok saya ingin berkonsultasi" time="10:17" />
               <ChatMessage message="Dok, kucing saya sering sakit akhir-akhir ini" time="10:17" />
             </div>
-            <div className="p-4 border-t bg-white flex items-center">
-              <input type="text" className="flex-grow p-2 border rounded-lg mr-2" placeholder="Tulis Pesan..." />
-              <button className="bg-orange-500 text-white p-2 rounded-lg shadow hover:bg-orange-600">
-                <FaPaperPlane />
-              </button>
-            </div>
+            {/* Tombol "Kirim" dihapus */}
           </div>
         </div>
       </div>
