@@ -11,13 +11,18 @@ const data = [
   { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
   { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
   { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
 
 ];
 
 // Komponen Card
 const Card = ({ name, description, imageUrl }) => {
   return (
-    <div className="p-4 bg-white border rounded shadow">
+    <div className="p-4 bg-white border rounded shadow ">
       <img src={imageUrl} alt={name} className="w-full h-48 object-cover rounded-t" />
       <div className="p-4">
         <h2 className="text-lg font-bold mb-2">{name}</h2>
@@ -30,15 +35,15 @@ const PostingHewanPage = () => {
   return (
     <>
       <Navbar />
-      <div className=" flex justify-center items-start ">
+      <div className=" flex justify-center items-start  ">
 
         <div className="w-1/3 h-screen p-8">
           <ul>
-            <li className="p-2">Profil Saya</li>
-            <li className="p-2">Daftar Alamat</li>
-            <li className="p-2">Favorit</li>
-            <li className="p-2">Pesan</li>
-            <li className="p-2">Posting Hewan Saya</li>
+            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Profil Saya</a></li>
+            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Daftar Alamat</a></li>
+            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Favorit</a></li>
+            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Pesan</a></li>
+            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Posting Hewan Saya</a></li>
           </ul>
         </div>
         <div className=" w-full h-auto p-12">
@@ -48,7 +53,7 @@ const PostingHewanPage = () => {
               <button className=" text-white  py-2 px-4 rounded-md bg-[#DE9455]
 hover:bg-[#D68B4B]"> + Posting Hewan</button>
             </div>
-              {/* Grid */}
+            {/* Grid */}
             <div className="container mx-auto p-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {data.map((item) => (
