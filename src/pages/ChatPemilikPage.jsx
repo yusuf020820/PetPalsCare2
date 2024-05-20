@@ -17,7 +17,7 @@ const ChatMessage = ({ sender, message, time }) => {
   const isUser = sender === 'user';
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
-      <div className={`max-w-2xl p-4 rounded-lg shadow-md ${isUser ? 'bg-yellow-100' : 'bg-gray-100'}`}>
+      <div className={`w-full max-w-3xl p-4 rounded-lg shadow-md ${isUser ? 'bg-yellow-100' : 'bg-gray-100'}`}>
         <p>{message}</p>
         <p className="text-xs text-gray-500 text-right">{time}</p>
       </div>
@@ -43,8 +43,8 @@ const ChatPemilikPage = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen p-6 flex flex-col">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden flex-1 flex flex-col">
+    <div className="bg-gray-100 min-h-screen p-6">
+      <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
         <div className="p-6 border-b">
           <h2 className="text-lg font-bold mb-2">Welcome to PetPals Care!</h2>
           <div className="flex items-center mb-2">
@@ -52,13 +52,13 @@ const ChatPemilikPage = () => {
             <div>
               <h3 className="font-bold text-lg">Chat with Pet Owner</h3>
               <div className="flex items-center text-sm text-gray-600">
-                <FaMapMarkerAlt className="mr-1" /> Location: Jl. Dhoho
+                <FaMapMarkerAlt className="mr-1" />Jl. Dhoho
               </div>
               <div className="flex items-center text-sm text-gray-600">
-                <FaClock className="mr-1" /> Available: 12:30 - 18:00
+                <FaClock className="mr-1" />12:30 - 18:00
               </div>
               <div className="flex items-center text-sm text-gray-600">
-                <FaHandshake className="mr-1" /> Status: Ready to meet
+                <FaHandshake className="mr-1" />Ready to meet
               </div>
             </div>
           </div>
