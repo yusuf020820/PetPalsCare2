@@ -36,7 +36,7 @@ const Navbar = () => {
               </span>
             </div>
             <a href="/Daftar-PetPalsCare" className="py-2 px-4 bg-[#F7DBA7] border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#ED9455] hover:text-white transition duration-300">Daftar</a>
-            <a href="/Login-PetPalsCare" className="py-2 px-4 bg-[#ED9455] text-white rounded-full hover:bg-[#e28d51] transition duration-300">Masuk</a>
+            <a href="/Login-PetPalsCare" className="py-2 px-4 bg-[#ED9455] text-white rounded-full hover:bg-[#f89b59] transition duration-300">Masuk</a>
           </div>
 
           {/* Mobile menu button */}

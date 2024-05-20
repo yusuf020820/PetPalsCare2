@@ -79,9 +79,9 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
             <div className="text-gray-500 text-xs font-normal">{experience}</div>
           </div>
         </div>
-        <div className="self-stretch px-2.5 pt-1.5 pb-1 bg-orange-400 rounded-lg justify-start items-center gap-0.5 inline-flex">
+        <button className="self-stretch px-2.5 pt-1.5 pb-1 bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
           <div className="w-20 text-center text-white text-sm font-semibold leading-tight">Lihat Detail</div>
-        </div>
+        </button>
       </div>
     </div>
   );
@@ -102,7 +102,7 @@ const HomepageBefore = () => {
           <div className="w-[480px] text-stone-500 text-base font-normal font-sans mt-4">
             Bersama-sama, kita berkomitmen untuk mengubah dan memperbaiki kesejahteraan hewan serta menciptakan kehidupan yang penuh kebahagiaan bagi mereka!
           </div>
-          <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#e28d51] transition duration-300 rounded-full flex justify-center items-center mt-10">
+          <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#f89b59] transition duration-300 rounded-full flex justify-center items-center mt-10">
             <span className="text-white">Explore Now</span>
           </button>
 
@@ -138,13 +138,21 @@ const HomepageBefore = () => {
       </div>
 
       <div className="container mx-auto p-8">
-        <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">Rekomendasi Dokter Hewan</div>
-        <div className="text-black text-base font-normal mb-10">Ingin berkonsultasi dengan dokter hewan terpercaya?</div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {doctorData.map((doctor) => (
-            <DoctorCard key={doctor.id} imageUrl={doctor.imageUrl} name={doctor.name} specialty={doctor.specialty} experience={doctor.experience} />
-          ))}
-        </div>
+  <div className="flex justify-between items-center mb-10">
+    <div>
+      <div className="text-black text-base font-normal mb-1">Ingin berkonsultasi dengan dokter hewan terpercaya?</div>
+      <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">Rekomendasi Dokter Hewan</div>
+    </div>
+
+    <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center mt-10">
+            <span className="text-white">Tampilkan Lainnya</span>
+          </button>
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {doctorData.map((doctor) => (
+      <DoctorCard key={doctor.id} imageUrl={doctor.imageUrl} name={doctor.name} specialty={doctor.specialty} experience={doctor.experience} />
+    ))}
+  </div>
 
       </div>
     </div>
