@@ -27,10 +27,10 @@ const Card = ({ JenisHewan, Nama, Kelamin, Usia, imageUrl }) => {
         <div className="font-bold text-xl mb-2">
           <h1>{JenisHewan}</h1>
         </div>
-        <p className="text-[#667479] text-base">Nama : {Nama}</p>
+        <p className="text-[#667479] text-base">Nama: {Nama}</p>
         <div className=' flex gap-2'>
-          <p className="text-[#667479] text-xs">Kelamin : {Kelamin}</p>
-          <p className="text-[#667479] text-xs"> Usia : {Usia}</p>
+          <p className="text-[#667479] text-xs">Kelamin: {Kelamin}</p>
+          <p className="text-[#667479] text-xs">Usia: {Usia}</p>
         </div>
       </div>
     </div>

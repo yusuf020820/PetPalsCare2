@@ -5,66 +5,258 @@ import image1 from '../assets/images/vectorhome1.png';
 import image2 from "../assets/images/vectorhome2.png";
 import image3 from "../assets/images/vectorhome3.png";
 import image4 from "../assets/images/vectorhome4.png";
-import { Description } from '@headlessui/react';
+import doktercwo from "../assets/images/DokterCowo.png";
+import doktercwe from "../assets/images/DokterCewe.png";
+import vaksinKucing from '../assets/images/vaksinimg.jpg';
+import adoptionBgImage from '../assets/images/banner2.png';
 
 const data = [
-  {id:1,Imgurl:image1,text:"Lokasi Dokter Hewan", Description:"Kemudahan untuk menemukan dokter hewan terdekat dengan cepat."},
-  {id:2,Imgurl:image2,text:"Konsultasi Dokter", Description:"Berkonsultasi dengan dokter hewan secara online untuk memperoleh saran penanganan."},
-  {id:3,Imgurl:image3,text:"Adopsi Hewan", Description:"Menjelajahi daftar-daftar hewan yang anda inginkan untuk dipelihara."},
-  {id:4,Imgurl:image4,text:"Temukan Pengadopsi", Description:"Anda dapat mengunggah profil hewan anda untuk menemukan pengadopsi yang cocok."},
-]
+  { id: 1, Imgurl: image1, text: "Lokasi Dokter Hewan", description: "Kemudahan untuk menemukan dokter hewan terdekat dengan cepat." },
+  { id: 2, Imgurl: image2, text: "Konsultasi Dokter", description: "Berkonsultasi dengan dokter hewan secara online untuk memperoleh saran penanganan." },
+  { id: 3, Imgurl: image3, text: "Adopsi Hewan", description: "Menjelajahi daftar-daftar hewan yang anda inginkan untuk dipelihara." },
+  { id: 4, Imgurl: image4, text: "Temukan Pengadopsi", description: "Anda dapat mengunggah profil hewan anda untuk menemukan pengadopsi yang cocok." },
+];
 
+const doctorData = [
+  {
+    id: 1,
+    name: "Drh. Bagus Syahputra A",
+    specialty: "Hewan Domestik dan Eksotik",
+    experience: "7 Tahun",
+    imageUrl: doktercwo
+  },
+  {
+    id: 2,
+    name: "Drh. Nurma Lala",
+    specialty: "Kucing dan Anjing",
+    experience: "5 Tahun",
+    imageUrl: doktercwe
+  },
+  {
+    id: 3,
+    name: "Drh. Septian Priatama",
+    specialty: "Hewan Ternak dan Unggas",
+    experience: "10 Tahun",
+    imageUrl: doktercwo
+  },
+  {
+    id: 4,
+    name: "Drh. Ami Kosriami",
+    specialty: "Anjing dan Kucing, Ternak",
+    experience: "15 Tahun",
+    imageUrl: doktercwe
+  },
+];
 
+const petData = [
+  {
+    id: 1,
+    ras: "Kucing Anggora",
+    nama: "Si Manis",
+    kelamin: "Betina",
+    usia: "4 Bulan",
+    imageUrl: "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp"
+  },
+  {
+    id: 2,
+    ras: "Anjing Golden Retriever",
+    nama: "Si Manis",
+    kelamin: "Betina",
+    usia: "4 Bulan",
+    imageUrl: "path/to/image1.jpg"
+  },
+  {
+    id: 3,
+    ras: "Kucing Lokal",
+    nama: "Si Manis",
+    kelamin: "Betina",
+    usia: "4 Bulan",
+    imageUrl: "path/to/image1.jpg"
+  },
+  {
+    id: 4,
+    ras: "Kucing Anggora",
+    nama: "Si Manis",
+    kelamin: "Betina",
+    usia: "4 Bulan",
+    imageUrl: "path/to/image1.jpg"
+  },
+];
 
-const Card = ({Imgurl, text , Description}) => {
+const Card = ({ Imgurl, text, description }) => {
   return (
     <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
-    <div className="flex items-start justify-start mb-4">
-    <img src={Imgurl} alt={text} className="h-10"/>
+      <div className="flex items-center justify-start mb-4">
+        <img src={Imgurl} alt={text} className="h-12 w-12" />
+      </div>
+      <h2 className="text-xl font-semibold mb-2">{text}</h2>
+      <p className="text-gray-600">{description}</p>
     </div>
-    <h2 className="text-xl font-semibold mb-2">{text}</h2>
-    <p className="text-gray-600">{Description}</p>
+  );
+};
+
+const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
+  return (
+    <div className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
+      <div className="w-auto h-52 bg-white rounded-[10px] justify-center items-center ">
+        <img className="w-auto h-52" src={imageUrl} alt={name} />
+      </div>
+      <div className="px-2 pt-2 pb-5 flex-col justify-start items-start gap-2.5 flex">
+        <div className="flex-col justify-start items-start gap-1 flex">
+          <div className="self-stretch text-slate-900 text-xl font-normal leading-10">{name}</div>
+          <div className="self-stretch justify-start items-start gap-1 inline-flex">
+            <div className="justify-start items-start gap-1.5 flex">
+              <div className="w-[61px] h-[18px] text-gray-500 text-xs font-black">Spesialis:</div>
+              <div className="w-[171px] h-[18px] text-gray-500 text-xs font-normal">{specialty}</div>
+            </div>
+          </div>
+          <div className="justify-start items-start gap-1.5 inline-flex">
+            <div className="text-gray-500 text-xs font-black">Pengalaman:</div>
+            <div className="text-gray-500 text-xs font-normal">{experience}</div>
+          </div>
+        </div>
+        <button className="self-stretch px-2.5 pt-1.5 pb-1 bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
+          <div className="w-20 text-center text-white text-sm font-semibold leading-tight">Lihat Detail</div>
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
+  return (
+    <div className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
+      <div className="w-full h-52 bg-white rounded-[10px] overflow-hidden flex justify-center items-center">
+        <img className="w-full h-full object-cover" src={imageUrl} alt={nama} />
+      </div>
+      <div className="px-2 pt-2 pb-5 flex-col justify-start items-start gap-2.5 flex">
+        <div className="flex-col justify-start items-start gap-1 flex">
+          <div className="self-stretch text-slate-900 text-xl font-normal leading-10">{nama}</div>
+          <div className="self-stretch justify-start items-start gap-1 inline-flex">
+            <div className="justify-start items-start gap-1.5 flex">
+              <div className="w-[61px] h-[18px] text-gray-500 text-xs font-black">Ras Hewan:</div>
+              <div className="w-[171px] h-[18px] text-gray-500 text-xs font-normal">{ras}</div>
+            </div>
+          </div>
+          <div className="justify-start items-start gap-1.5 inline-flex">
+            <div className="text-gray-500 text-xs font-black">Kelamin:</div>
+            <div className="text-gray-500 text-xs font-normal">{kelamin}</div>
+          </div>
+          <div className="justify-start items-start gap-1.5 inline-flex">
+            <div className="text-gray-500 text-xs font-black">Usia:</div>
+            <div className="text-gray-500 text-xs font-normal">{usia}</div>
+          </div>
+        </div>
+        <button className="self-stretch px-2.5 pt-1.5 pb-1 bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
+          <div className="w-20 text-center text-white text-sm font-semibold leading-tight">Lihat Detail</div>
+        </button>
+      </div>
+    </div>
+  );
+};
 
 
 
 const HomepageBefore = () => {
   return (
-    <>
+    <div className="font-sans">
       <div>
-        <Navbar/>
+        <Navbar />
       </div>
       <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="absolute left-[130px] top-[180px]">
           <div className="text-neutral-800 text-5xl font-bold font-sans capitalize leading-[68px]">
-            Hewan Sehat, Hati Bahagia 
+            Hewan Sehat, Hati Bahagia
             <p>Temukan Perawatan Terbaik</p>
           </div>
-
           <div className="w-[480px] text-stone-500 text-base font-normal font-sans mt-4">
             Bersama-sama, kita berkomitmen untuk mengubah dan memperbaiki kesejahteraan hewan serta menciptakan kehidupan yang penuh kebahagiaan bagi mereka!
           </div>
-          <button className="w-[163px] px-7 pt-3.5 pb-2.5 bg-[#ED9455] hover:bg-[#e28d51] transition duration-300 rounded-full flex justify-center items-center mt-10">
-            <span className="text-white">Explore Now</span>
+          <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#f89b59] transition duration-300 rounded-full flex justify-center items-center mt-10">
+            <span className="text-white">Jelajahi Sekarang</span>
           </button>
         </div>
       </div>
 
+      <div className="container mx-auto p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {data.map((item) => (
+            <Card key={item.id} Imgurl={item.Imgurl} text={item.text} description={item.description} />
+          ))}
+        </div>
+      </div>
 
-     
-      <div className="container mx-auto p-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {data.map((item) => (
-                  <Card key={item.id} Imgurl={item.Imgurl} text={item.text} Description={item.Description} />
-                ))}
-              </div>
-            </div>
+      <div className="container mx-auto p-8 flex flex-col lg:flex-row items-center gap-8">
+        <div className="w-full lg:w-1/2 h-[23rem] overflow-hidden rounded-lg">
+          <img src={vaksinKucing} alt="vaksin" className="w-full h-full object-cover" />
+        </div>
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-4xl font-bold mb-10">Vaksinasi dan Imunisasi</h2>
+          <div className="text-gray-700 space-y-4 leading-relaxed">
+            <p>
+              Pastikan hewan peliharaan Anda mendapatkan vaksinasi dan imunisasi yang diperlukan untuk menjaga kesehatan dan kekebalan tubuh mereka.
+            </p>
+            <p>
+              Setiap vaksinasi adalah investasi dalam kesehatan dan kesejahteraan hewan peliharaan Anda, memberikan mereka perlindungan yang kuat dan memastikan bahwa mereka dapat hidup dengan nyaman dan bahagia dalam lingkungan yang aman dan sehat.
+            </p>
+            <p>
+              Konsultasikan dengan dokter hewan Anda untuk mengetahui jenis vaksinasi yang tepat dan jadwal yang sesuai untuk hewan peliharaan Anda.
+            </p>
+          </div>
+        </div>
+      </div>
 
-       
-    </>
+      <div className="container mx-auto p-8">
+        <div className="flex justify-between items-center mb-10">
+          <div>
+            <div className="text-black text-base font-normal mb-1">Ingin berkonsultasi dengan dokter hewan terpercaya?</div>
+            <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">Rekomendasi Dokter Hewan</div>
+          </div>
+          <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
+            <span className="text-white">Tampilkan Lainnya</span>
+          </button>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {doctorData.map((doctor) => (
+            <DoctorCard key={doctor.id} imageUrl={doctor.imageUrl} name={doctor.name} specialty={doctor.specialty} experience={doctor.experience} />
+          ))}
+        </div>
+      </div>
+
+      <div className="relative w-full h-screen bg-cover bg-center mt-10" style={{ backgroundImage: `url(${adoptionBgImage})` }}>
+        <div className="absolute left-[130px] top-[120px] w-full lg:w-1/2">
+          <h2 className="text-4xl font-bold mb-10 leading-tight font">Manfaat Mempelihara Hewan Membawa Kebahagiaan dalam Kehidupan Anda</h2>
+          <div className="text-gray-700 space-y-4 leading-relaxed">
+            <p>
+              Hewan peliharaan tidak hanya menjadi bagian dari keluarga, tetapi juga menjadi teman sejati yang menghadirkan keceriaan dan kenangan tak terlupakan.
+            </p>
+            <p>
+              Setiap hewan yang diadopsi mendapatkan kesempatan kedua untuk menciptakan kenangan indah, bersama keluarga yang penuh kasih sayang. Adopsi adalah tindakan nyata yang membantu mengurangi jumlah hewan terlantar di komunitas kita. Bergabunglah dengan kami hari ini dalam misi menyelamatkan dan memberikan cinta kepada mereka yang membutuhkan, melalui adopsi hewan peliharaan!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto p-8">
+  <div className="flex justify-between items-center mb-10">
+    <div>
+      <div className="text-black text-base font-normal mb-1">Ingin mengadopsi hewan peliharaan yang lucu?</div>
+      <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">Hewan yang Siap diadopsi</div>
+    </div>
+    <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
+      <span className="text-white">Tampilkan Semua</span>
+    </button>
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {petData.map((pet) => (
+      <PetCard key={pet.id} imageUrl={pet.imageUrl} nama={pet.nama} ras={pet.ras} kelamin={pet.kelamin} usia={pet.usia} />
+    ))}
+  </div>
+</div>
+
+
+    </div>
   );
-}
+};
 
 export default HomepageBefore;
