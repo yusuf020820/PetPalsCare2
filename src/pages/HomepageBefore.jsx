@@ -75,7 +75,7 @@ const petData = [
   },
   {
     id: 4,
-    ras: "Kucing Anggora",
+    ras: "Kucing Anggora Persia",
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
