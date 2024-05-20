@@ -134,7 +134,7 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
           <div className="self-stretch text-slate-900 text-xl font-normal leading-10">{nama}</div>
           <div className="self-stretch justify-start items-start gap-1 inline-flex">
             <div className="justify-start items-start gap-1.5 flex">
-              <div className="w-[61px] h-[18px] text-gray-500 text-xs font-black">Ras:</div>
+              <div className="w-[61px] h-[18px] text-gray-500 text-xs font-black">Ras Hewan:</div>
               <div className="w-[171px] h-[18px] text-gray-500 text-xs font-normal">{ras}</div>
             </div>
           </div>
