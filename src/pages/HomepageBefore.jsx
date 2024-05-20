@@ -67,7 +67,7 @@ const petData = [
   },
   {
     id: 3,
-    ras: "Kucing Lokal",
+    ras: "Kucing Lokal Jawa",
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
@@ -125,17 +125,17 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
 
 const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
   return (
-    <div className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
+    <div className="px-2 pt-4 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
       <div className="w-full h-52 bg-white rounded-[10px] overflow-hidden flex justify-center items-center">
         <img className="w-full h-full object-cover" src={imageUrl} alt={nama} />
       </div>
-      <div className="px-2 pt-2 pb-5 flex-col justify-start items-start gap-2.5 flex">
-        <div className="flex-col justify-start items-start gap-1 flex">
+      <div className="px-2 pt-5 justify-start items-start gap-2.5 flex">
+        <div className="flex-col justify-start items-start gap-1 flex  px-4">
           <div className="self-stretch text-slate-900 text-xl font-normal leading-10">{nama}</div>
           <div className="self-stretch justify-start items-start gap-1 inline-flex">
-            <div className="justify-start items-start gap-1.5 flex">
-              <div className="w-[61px] h-[18px] text-gray-500 text-xs font-black">Ras Hewan:</div>
-              <div className="w-[171px] h-[18px] text-gray-500 text-xs font-normal">{ras}</div>
+            <div className="justify-start items-start gap-8 flex">
+              <div className="w-5/6 h-auto text-gray-500 text-xs font-black">Ras Hewan:</div>
+              <div className="w-full h-auto text-gray-500 text-xs font-normal line-clamp-2">{ras}</div>
             </div>
           </div>
           <div className="justify-start items-start gap-1.5 inline-flex">
@@ -147,10 +147,13 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
             <div className="text-gray-500 text-xs font-normal">{usia}</div>
           </div>
         </div>
-        <button className="self-stretch px-2.5 pt-1.5 pb-1 bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
+      </div>
+      <div className='py-4'>
+      <button className="self-stretch px-8 py-2  bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
           <div className="w-20 text-center text-white text-sm font-semibold leading-tight">Lihat Detail</div>
         </button>
       </div>
+      
     </div>
   );
 };

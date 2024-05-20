@@ -6,6 +6,11 @@ const data = [
   { id: 1, name: 'Kucing Lokal', description: 'Nama : Luo Yen', imageUrl: 'https://i.ibb.co.com/QdPkcz4/ucing.png' },
   { id: 2, name: 'Anjing Mini', description: 'Nama : Shiro', imageUrl: 'https://i.ibb.co.com/cFrGGyw/persia.png' },
   { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
+  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
 
 ];
 
@@ -36,7 +41,7 @@ const PostingHewanPage = () => {
             <li className="p-2">Posting Hewan Saya</li>
           </ul>
         </div>
-        <div className=" w-full h-screen p-12">
+        <div className=" w-full h-auto p-12">
           <div className="bg-white p-4 rounded-xl w-full h-full shadow-2xl">
             <h1 className="p-4"> Postingan Hewan Saya </h1>
             <div className="px-4 py-2 ">
