@@ -44,6 +44,7 @@ const AdopsiPage = () => {
       <div className=' w-full h-auto pt-8 px-20 container'>
         <div>
           <img src="adopsi.png" alt="adopsi" className='px-30'/>
+          
         </div>
 
         <div >

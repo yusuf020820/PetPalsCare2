@@ -3,8 +3,8 @@ import Footer from "../Components/Footer"
 import logo from "../assets/images/logo.png";
 
 const data = [
-  { id: 1, name: 'Maria', description: 'Maria Asal Kepri', imageUrl: 'https://via.placeholder.com/150' },
-  { id: 2, name: 'Item 2', description: 'Deskripsi item 2', imageUrl: 'https://via.placeholder.com/150' },
+  { id: 1, name: 'Kucing Lokal', description: 'Nama : Luo Yen', imageUrl: 'https://i.ibb.co.com/QdPkcz4/ucing.png' },
+  { id: 2, name: 'Anjing Mini', description: 'Deskripsi item 2', imageUrl: 'https://via.placeholder.com/150' },
   { id: 3, name: 'Item 3', description: 'Deskripsi item 3', imageUrl: 'https://via.placeholder.com/150' },
   { id: 4, name: 'Item 4', description: 'Deskripsi item 4', imageUrl: 'https://via.placeholder.com/150' },
   { id: 5, name: 'Item 5', description: 'Deskripsi item 5', imageUrl: 'https://via.placeholder.com/150' },
