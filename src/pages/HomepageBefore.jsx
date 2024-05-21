@@ -88,11 +88,8 @@ const petData = [
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
-<<<<<<< HEAD
-    imageUrl: "path/to/image1.jpg",
-=======
-    imageUrl: "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp"
->>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
+    imageUrl:
+      "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp",
   },
   {
     id: 3,
@@ -100,11 +97,8 @@ const petData = [
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
-<<<<<<< HEAD
-    imageUrl: "path/to/image1.jpg",
-=======
-    imageUrl: "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp"
->>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
+    imageUrl:
+      "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp",
   },
   {
     id: 4,
@@ -112,11 +106,8 @@ const petData = [
     nama: "Si Manis",
     kelamin: "Betina",
     usia: "4 Bulan",
-<<<<<<< HEAD
-    imageUrl: "path/to/image1.jpg",
-=======
-    imageUrl: "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp"
->>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
+    imageUrl:
+      "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp",
   },
 ];
 
@@ -160,10 +151,8 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
             </div>
           </div>
         </div>
-        <button className="self-stretch px-2.5 pt-1.5 pb-1 bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
-          <div className="w-20 text-center text-white text-sm font-semibold leading-tight">
-            Lihat Detail
-          </div>
+        <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
+          Lihat Detail
         </button>
       </div>
     </div>
@@ -172,52 +161,23 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
 
 const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
   return (
-<<<<<<< HEAD
-    <div className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
-      <div className="w-full h-52 bg-white rounded-[10px] overflow-hidden flex justify-center items-center">
-        <img className="w-full h-full object-cover" src={imageUrl} alt={nama} />
-      </div>
-      <div className="px-2 pt-2 pb-5 flex-col justify-start items-start gap-2.5 flex">
-        <div className="flex-col justify-start items-start gap-1 flex">
-          <div className="self-stretch text-slate-900 text-xl font-normal leading-10">
-            {nama}
-          </div>
-          <div className="self-stretch justify-start items-start gap-1 inline-flex">
-            <div className="justify-start items-start gap-1.5 flex">
-              <div className="w-[61px] h-[18px] text-gray-500 text-xs font-black">
-                Ras Hewan:
-              </div>
-              <div className="w-[171px] h-[18px] text-gray-500 text-xs font-normal">
-                {ras}
-              </div>
-=======
-    <div className="p-2 rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
-      <div className="w-full h-52 bg-white rounded-[10px] overflow-hidden flex justify-center items-center">
-        <img className="w-full h-full object-cover" src={imageUrl} alt={nama} />
-      </div>
-      <div className=" justify-start items-start gap-2.5 flex h-auto w-full">
-        <div className="flex-col justify-start items-start gap-1 flex p-2 w-full">
-          <div className="self-stretch text-slate-900 text-xl font-normal leading-10">{nama}</div>
-          <div className="self-stretch justify-start items-start gap-1 inline-flex ">
-            <div className="justify-start items-start gap-8 flex w-full">
-              <div className="w-1/2 h-auto text-gray-500 text-xs font-black ">Ras Hewan:</div>
-              <div className="w-1/2 h-auto text-gray-500 text-xs font-normal line-clamp-2">{ras}</div>
->>>>>>> 072586bf121f56376c0975aacfe26597d3dcca06
-            </div>
-          </div>
-          <div className="justify-start items-start gap-8 flex w-full">
-            <div className="w-1/2 h-auto text-gray-500 text-xs font-black">Kelamin:</div>
-            <div className="w-1/2 h-auto text-gray-500 text-xs font-normal line-clamp-2">{kelamin}</div>
-          </div>
-          <div className="justify-start items-start gap-8 flex w-full">
-            <div className="w-1/2 h-auto text-gray-500 text-xs font-black">Usia:</div>
-            <div className="w-1/2 h-auto text-gray-500 text-xs font-normal line-clamp-2">{usia}</div>
-          </div>
+    <div className="max-w-xs mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+      <img className="w-full h-52 object-cover" src={imageUrl} alt={nama} />
+      <div className="p-4">
+        <h2 className="text-xl font-bold text-slate-900">{nama}</h2>
+        <div className="mt-2 text-gray-600">
+          <p className="line-clamp-1">
+            <span className="font-semibold">Ras:</span> {ras}
+          </p>
+          <p>
+            <span className="font-semibold">Kelamin:</span> {kelamin}
+          </p>
+          <p>
+            <span className="font-semibold">Usia:</span> {usia}
+          </p>
         </div>
-        <button className="self-stretch px-2.5 pt-1.5 pb-1 bg-[#ED9455] hover:bg-[#f89b59] rounded-lg justify-center items-center gap-0.5 inline-flex transition duration-300">
-          <div className="w-20 text-center text-white text-sm font-semibold leading-tight">
-            Lihat Detail
-          </div>
+        <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
+          Lihat Detail
         </button>
       </div>
     </div>

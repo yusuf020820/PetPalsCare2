@@ -9,33 +9,33 @@ const PetDetailPage = () => {
         {/* Bagian gambar */}
         <div className="w-full md:w-1/2 flex flex-col items-center mb-8 md:mb-0">
           <img
-            className="w-full h-3/5 rounded-lg mb-4 object-cover"
+            className="w-[530px] h-[530px] rounded-lg mb-4 object-cover"
             src="https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-puppy-standing-outdoors.jpg"
             alt="Pet"
           />
           <div className="flex space-x-3">
             <img
-              className="w-24 h-24 rounded-md border-2 border-amber-200"
+              className="w-24 h-24 rounded-md border-2"
               src="https://via.placeholder.com/94x94"
               alt="Thumbnail"
             />
             <img
-              className="w-24 h-24 rounded-md border-2 border-amber-200"
+              className="w-24 h-24 rounded-md border-2"
               src="https://via.placeholder.com/94x94"
               alt="Thumbnail"
             />
             <img
-              className="w-24 h-24 rounded-md border-2 border-amber-200"
+              className="w-24 h-24 rounded-md border-2"
               src="https://via.placeholder.com/94x94"
               alt="Thumbnail"
             />
             <img
-              className="w-24 h-24 rounded-md border-2 border-amber-200"
+              className="w-24 h-24 rounded-md border-2"
               src="https://via.placeholder.com/94x94"
               alt="Thumbnail"
             />
             <img
-              className="w-24 h-24 rounded-md border-2 border-amber-200"
+              className="w-24 h-24 rounded-md border-2"
               src="https://via.placeholder.com/94x94"
               alt="Thumbnail"
             />
