@@ -210,7 +210,7 @@ const HomepageBefore = () => {
         </div>
       </div>
 
-      <div className="container mx-auto p-8">
+      <div className="container mx-auto p-8 pt-28">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {data.map((item) => (
             <Card
@@ -223,7 +223,7 @@ const HomepageBefore = () => {
         </div>
       </div>
 
-      <div className="container mx-auto p-8 flex flex-col lg:flex-row items-center gap-8">
+      <div className="container mx-auto p-8 flex flex-col lg:flex-row items-center gap-8 pt-28">
         <div className="w-full lg:w-1/2 h-[23rem] overflow-hidden rounded-lg">
           <img
             src={vaksinKucing}
@@ -254,13 +254,13 @@ const HomepageBefore = () => {
         </div>
       </div>
 
-      <div className="container mx-auto p-8">
+      <div className="container mx-auto p-8 pt-28">
         <div className="flex justify-between items-center mb-10">
           <div>
             <div className="text-black text-base font-normal mb-1">
               Ingin berkonsultasi dengan dokter hewan terpercaya?
             </div>
-            <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">
+            <div className="text-[#ED9455] text-2xl font-extrabold capitalize mb-2">
               Rekomendasi Dokter Hewan
             </div>
           </div>
@@ -307,13 +307,13 @@ const HomepageBefore = () => {
         </div>
       </div>
 
-      <div className="container mx-auto p-8">
+      <div className="container mx-auto p-8 pt-32">
         <div className="flex justify-between items-center mb-10">
           <div>
             <div className="text-black text-base font-normal mb-1">
               Ingin mengadopsi hewan peliharaan yang lucu?
             </div>
-            <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">
+            <div className="text-[#ED9455] text-2xl font-extrabold capitalize mb-2">
               Hewan yang Siap diadopsi
             </div>
           </div>

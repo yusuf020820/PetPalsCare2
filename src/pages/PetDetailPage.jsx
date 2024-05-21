@@ -174,7 +174,7 @@ const PetDetailPage = () => {
             <div className="text-black text-base font-normal mb-1">
               Belum menemukan hewan yang cocok?
             </div>
-            <div className="text-orange-400 text-2xl font-extrabold capitalize mb-2">
+            <div className="text-[#ED9455] text-2xl font-extrabold capitalize mb-2">
               Lihat Hewan Lainnya
             </div>
           </div>
