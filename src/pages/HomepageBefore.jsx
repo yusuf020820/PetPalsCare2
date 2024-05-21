@@ -153,7 +153,7 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
           </div>
         </div>
         <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-          Lihat Detail
+        <a href="/Login-PetPalsCare">Lihat Detail</a>
         </button>
       </div>
     </div>
@@ -178,7 +178,7 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
           </p>
         </div>
         <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-          Lihat Detail
+          <a href="/Login-PetPalsCare">Lihat Detail</a>
         </button>
       </div>
     </div>
