@@ -205,9 +205,12 @@ const HomepageBefore = () => {
             kesejahteraan hewan serta menciptakan kehidupan yang penuh
             kebahagiaan bagi mereka!
           </div>
+          <a href="/Daftar-dokter-hewan">
           <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#f89b59] transition duration-300 rounded-full flex justify-center items-center mt-10">
             <span className="text-white">Jelajahi Sekarang</span>
           </button>
+          </a>
+          
         </div>
       </div>
 
@@ -265,9 +268,11 @@ const HomepageBefore = () => {
               Rekomendasi Dokter Hewan
             </div>
           </div>
+          <a href="/">
           <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
             <span className="text-white">Tampilkan Lainnya</span>
           </button>
+          </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {doctorData.map((doctor) => (
@@ -318,9 +323,11 @@ const HomepageBefore = () => {
               Hewan yang Siap diadopsi
             </div>
           </div>
+          <a href="/Adopsi-hewan">
           <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
             <span className="text-white">Tampilkan Semua</span>
           </button>
+          </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {petData.map((pet) => (

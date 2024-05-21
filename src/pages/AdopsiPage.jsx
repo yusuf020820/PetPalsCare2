@@ -32,6 +32,11 @@ const Card = ({ JenisHewan, Nama, Kelamin, Usia, imageUrl }) => {
           <p className="text-[#667479] text-xs">Kelamin: {Kelamin}</p>
           <p className="text-[#667479] text-xs">Usia: {Usia}</p>
         </div>
+        <a href="/Detail-hewan">
+        <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
+          Lihat Detail
+        </button>
+        </a>
       </div>
     </div>
   )
