@@ -9,7 +9,7 @@ import doktercwo from "../assets/images/DokterCowo.png";
 import doktercwe from "../assets/images/DokterCewe.png";
 import vaksinKucing from "../assets/images/vaksinimg.jpg";
 import adoptionBgImage from "../assets/images/banner2.png";
-import Footer from "../Components/Footer"
+import Footer from "../Components/Footer";
 
 const data = [
   {
@@ -153,7 +153,7 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
           </div>
         </div>
         <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-          Lihat Detail
+          <a href="/Login-PetPalsCare">Lihat Detail</a>
         </button>
       </div>
     </div>
@@ -178,7 +178,7 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
           </p>
         </div>
         <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-          Lihat Detail
+          <a href="/Login-PetPalsCare">Lihat Detail</a>
         </button>
       </div>
     </div>
@@ -213,7 +213,6 @@ const HomepageBefore = () => {
           
         </div>
       </div>
-
       <div className="container mx-auto p-8 pt-28">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {data.map((item) => (
@@ -226,7 +225,6 @@ const HomepageBefore = () => {
           ))}
         </div>
       </div>
-
       <div className="container mx-auto p-8 flex flex-col lg:flex-row items-center gap-8 pt-28">
         <div className="w-full lg:w-1/2 h-[23rem] overflow-hidden rounded-lg">
           <img
@@ -257,7 +255,6 @@ const HomepageBefore = () => {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto p-8 pt-28">
         <div className="flex justify-between items-center mb-10">
           <div>
@@ -286,7 +283,6 @@ const HomepageBefore = () => {
           ))}
         </div>
       </div>
-
       <div
         className="relative w-full h-screen bg-cover bg-center mt-10"
         style={{ backgroundImage: `url(${adoptionBgImage})` }}
@@ -312,7 +308,6 @@ const HomepageBefore = () => {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto p-8 pt-32">
         <div className="flex justify-between items-center mb-10">
           <div>
@@ -341,11 +336,10 @@ const HomepageBefore = () => {
             />
           ))}
         </div>
-      </div>\
-      <Footer/>
+      </div>
+      \
+      <Footer />
     </div>
-
-  
   );
 };
 
