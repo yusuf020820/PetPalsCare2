@@ -1,5 +1,5 @@
-import Navbar from "../Components/Navbar"
-import Footer from "../Components/Footer"
+import Navbar from "../Components/Navbar-after";
+import Footer from '../Components/Footer-after';
 
 
 const ProfilUserPage = () => {
@@ -14,7 +14,7 @@ const ProfilUserPage = () => {
             <li className="p-2">Favorit</li>
             <li className="p-2">Pesan</li>
             <li className="p-2">Posting Hewan Saya</li>
-            <li className="py-8 px-2"> <a href="http://localhost:5173/Beranda"> Keluar</a></li>
+            <li className="py-8 px-2"> <a href="http://localhost:5173/"> Keluar</a></li>
           </ul>
         </div>
 

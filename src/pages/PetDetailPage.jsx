@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar-after";
+import Footer from '../Components/Footer-after';
 
 const petData = [
   {
@@ -162,10 +162,11 @@ const PetDetailPage = () => {
               </span>
             </div>
           </div>
-
+          <a href="/Chat-pemilik">
           <button className="mt-6 px-6 py-3 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
             Chat dengan pemilik untuk adopsi
           </button>
+          </a>
         </div>
       </div>
 

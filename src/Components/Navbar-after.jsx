@@ -17,7 +17,7 @@ function NavbarAfter() {
           {/* Nav Links */}
           <div className="hidden md:flex space-x-10 font-sans">
             <a
-              href="/"
+              href="/Beranda"
               className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300"
             >
               Beranda
@@ -116,9 +116,11 @@ function NavbarAfter() {
           </div>
         </div>
         <div className="flex justify-center py-2 px-4 mx-4 my-2">
+          <a href="/Profil">
           <button className="flex items-center justify-center w-12 h-12 bg-white border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#f89b59] hover:text-white transition duration-300">
-            <i className="fas fa-user text-lg"></i>
+          <i className="fas fa-user text-lg"></i>
           </button>
+          </a>
         </div>
       </div>
     </nav>

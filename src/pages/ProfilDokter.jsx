@@ -1,5 +1,5 @@
-import Navbar from "../Components/Navbar"
-import Footer from "../Components/Footer"
+import Navbar from "../Components/Navbar-after";
+import Footer from '../Components/Footer-after';
 
 
 const ProfilDokter = () => {
@@ -13,7 +13,7 @@ const ProfilDokter = () => {
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Daftar Alamat</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Favorit</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Pasien</a></li>
-            <li className="py-2 px-2  hover:bg-gray-400 border-collapse rounded-lg"> <a href="http://localhost:5173/Beranda"> Keluar</a></li>
+            <li className="py-2 px-2  hover:bg-gray-400 border-collapse rounded-lg"> <a href="http://localhost:5173/"> Keluar</a></li>
           </ul>
         </div>
 

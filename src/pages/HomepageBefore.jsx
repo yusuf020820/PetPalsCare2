@@ -205,7 +205,7 @@ const HomepageBefore = () => {
             kesejahteraan hewan serta menciptakan kehidupan yang penuh
             kebahagiaan bagi mereka!
           </div>
-          <a href="/Daftar-dokter-hewan">
+          <a href="/Login-PetPalsCare">
           <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#f89b59] transition duration-300 rounded-full flex justify-center items-center mt-10">
             <span className="text-white">Jelajahi Sekarang</span>
           </button>
@@ -255,9 +255,9 @@ const HomepageBefore = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto p-8 pt-28">
+      <div className="container mx-auto p-8 pt-28" id="rekomendasi-dokter">
         <div className="flex justify-between items-center mb-10">
-          <div>
+          <div> 
             <div className="text-black text-base font-normal mb-1">
               Ingin berkonsultasi dengan dokter hewan terpercaya?
             </div>
@@ -265,7 +265,7 @@ const HomepageBefore = () => {
               Rekomendasi Dokter Hewan
             </div>
           </div>
-          <a href="/">
+          <a href="/Login-PetPalsCare">
           <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
             <span className="text-white">Tampilkan Lainnya</span>
           </button>
@@ -308,7 +308,7 @@ const HomepageBefore = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto p-8 pt-32">
+      <div className="container mx-auto p-8 pt-32" id="adopsi">
         <div className="flex justify-between items-center mb-10">
           <div>
             <div className="text-black text-base font-normal mb-1">
@@ -318,7 +318,7 @@ const HomepageBefore = () => {
               Hewan yang Siap diadopsi
             </div>
           </div>
-          <a href="/Adopsi-hewan">
+          <a href="/Login-PetPalsCare">
           <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
             <span className="text-white">Tampilkan Semua</span>
           </button>

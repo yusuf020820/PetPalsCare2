@@ -61,10 +61,10 @@ const Footer = () => {
             </div>
 
             <LinkGroup header="Tautan">
-              <NavLink link="/" label="Beranda" />
-              <NavLink link="/rekomendasi-dokter" label="Cari Dokter" />
-              <NavLink link="/adopsi" label="Adopsi" />
-              <NavLink link="/Tentang-kami" label="Tentang Kami" />
+              <NavLink link="/Beranda" label="Beranda" />
+              <NavLink link="/Daftar-dokter-hewan" label="Cari Dokter" />
+              <NavLink link="/Adopsi-hewan" label="Adopsi" />
+              <NavLink link="/Tentang-PetPalsCare" label="Tentang Kami" />
             </LinkGroup>
             <LinkGroup header="Kontak">
               <NavLink link="/#" label="Kota Kediri, Jawa Timur" />

@@ -19,7 +19,8 @@ import ChatPemilikPage from "./pages/ChatPemilikPage";
 import PetDetailPage from "./pages/PetDetailPage";
 import AdopsiPage from "./pages/AdopsiPage";
 import KonsultasiPage from "./pages/KonsultasiPage";
-import AboutUsPage from "./pages/AboutUsPage";
+import AboutUsPageBefore from "./pages/AboutUsPageBefore";
+import AboutUsPageAfter from "./pages/AboutUsPageAfter";
 import DetailDokterCowo from "./pages/DetailDokterCowo";
 import DetailDokterCewe from "./pages/DetailDokterCewe";
 import DokterHewanPage from "./pages/DokterHewanPage";
@@ -47,7 +48,8 @@ function App() {
         <Route path="/Detail-hewan" Component={PetDetailPage} />
         <Route path="/Adopsi-hewan" Component={AdopsiPage} />
         <Route path="/Konsultasi-dokter" Component={KonsultasiPage} />
-        <Route path="/Tentang-PetPalsCare" Component={AboutUsPage} />
+        <Route path="/Tentang-kami" Component={AboutUsPageBefore} />
+        <Route path="/Tentang-PetPalsCare" Component={AboutUsPageAfter} />
         <Route path="/Detail-dokter-pria" Component={DetailDokterCowo} />
         <Route path="/Detail-dokter-wanita" Component={DetailDokterCewe} />
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />

@@ -2,8 +2,8 @@ import React from 'react';
 import DokterCewe from '../assets/images/DokterCewe.png';
 import DokterCowo from '../assets/images/DokterCowo.png';
 import DokterHewan from '../assets/images/DokterHewan.png';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import Navbar from "../Components/Navbar-after";
+import Footer from '../Components/Footer-after';
 
 // Komponen Kartu (Card) yang menerima properti teks
 const Card = ({ image, doctorName, specialty, experience }) => (
@@ -16,7 +16,9 @@ const Card = ({ image, doctorName, specialty, experience }) => (
       <p className="text-[#667479] text-xs mb-2" style={{ textAlign: 'justify' }}>Spesialis: {specialty}</p>
       <p className="text-[#667479] text-xs mb-4" style={{ textAlign: 'justify' }}>Pengalaman: {experience}</p>
       <div className="flex justify-center mt-2">
+        <a href="/Detail-dokter-pria">
         <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-8 rounded-full">Lihat Detail</button>
+        </a>
       </div>
     </div>
   </div>
