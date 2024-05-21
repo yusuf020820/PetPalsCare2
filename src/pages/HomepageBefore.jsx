@@ -9,6 +9,7 @@ import doktercwo from "../assets/images/DokterCowo.png";
 import doktercwe from "../assets/images/DokterCewe.png";
 import vaksinKucing from "../assets/images/vaksinimg.jpg";
 import adoptionBgImage from "../assets/images/banner2.png";
+import Footer from "../Components/Footer"
 
 const data = [
   {
@@ -333,8 +334,11 @@ const HomepageBefore = () => {
             />
           ))}
         </div>
-      </div>
+      </div>\
+      <Footer/>
     </div>
+
+  
   );
 };
 

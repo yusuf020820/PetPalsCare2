@@ -29,7 +29,9 @@ const VerifikasiPage = () => {
           {/* button */}
           <div className="w-full h-auto flex justify-center items-center py-4 ">
           <div className=" h-60 w-full max-w-4xl">
-          <button className="bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-4 px-8 rounded-full float-right" >Kembali Ke Beranda</button>
+          <button className="bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-4 px-8 rounded-full float-right" >
+            <a href="/Login-dokter">Kembali Ke Beranda</a>
+            </button>
           </div>
           </div>
           {/* end Button */}

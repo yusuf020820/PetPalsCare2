@@ -105,7 +105,7 @@ const RegisterDokterPage = () => {
 
             <div className="p-4">
               <button className="w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold size-1">
-                Daftar Sekarang
+               <a href="/Verifikasi">Daftar Sekarang</a> 
               </button>
             </div>
           </div>

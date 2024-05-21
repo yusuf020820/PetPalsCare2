@@ -19,7 +19,8 @@ const LoginDokterPage = () => {
             </div>
 
             <div className="p-4">
-              <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold size-1 ">Masuk Sekarang</button>
+              <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold size-1 ">
+                <a href="/Profil-dokter">Masuk Sekarang</a></button>
             </div>
           </div>
 
