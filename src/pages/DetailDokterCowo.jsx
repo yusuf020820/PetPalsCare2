@@ -1,7 +1,7 @@
 import DokterCowo from '../assets/images/DokterCowo.png'
 import React from 'react';
-import Navbar from "../Components/Navbar-after";
-import Footer from '../Components/Footer-after';
+import Navbar from "../Components/Navbar";
+import Footer from '../Components/Footer';
 
 const posts = [
   {
@@ -46,7 +46,7 @@ const Example = () => {
                     <span style={{ color: '#564741' }}><strong>Spesialis Hewan:</strong></span> Hewan Domestik dan Eksotik
                   </p>
                   <div className="mt-5 flex space-x-4">
-                    <button className="px-4 py-2 bg-[#ED9455] text-white rounded-lg hover:bg-[#d8854c]">Konsultasi</button>
+                    <button className="px-4 py-2 bg-[#ED9455] text-white rounded-lg hover:bg-[#d8854c]"><a href="/Pop-Up-Konfirmasi">Konsultasi</a></button>
                     <button className="px-4 py-2 bg-[#ED9455] text-white rounded-lg hover:bg-[#d8854c]">Lokasi Praktik</button>
                   </div>
                 </div>
