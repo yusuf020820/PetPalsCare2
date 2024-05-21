@@ -72,19 +72,21 @@ const ChatDokterPage = () => {
                 className={`p-4 flex items-center justify-between ${patient.unread ? 'bg-orange-100' : ''} cursor-pointer hover:bg-gray-200`}
               >
                 <div className="flex items-center">
-                  <img
-                    src={patientPhotos[patient.id] || "https://via.placeholder.com/50"}
-                    alt={patient.name}
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
+                  <label htmlFor={`file-upload-${patient.id}`}>
+                    <img
+                      src={patientPhotos[patient.id] || "https://via.placeholder.com/50"}
+                      alt={patient.name}
+                      className="w-12 h-12 rounded-full mr-4 cursor-pointer"
+                    />
+                  </label>
                   <div>
                     <h3 className="font-semibold">{patient.name}</h3>
                     <p className="text-sm text-gray-500">{patient.message}</p>
                   </div>
                 </div>
                 {patient.unread && <span className="text-red-500 text-sm font-semibold">●</span>}
-                {/* Menghilangkan label "Choose File" */}
                 <input
+                  id={`file-upload-${patient.id}`}
                   type="file"
                   accept="image/*"
                   onChange={(event) => handleFileUpload(event, patient.id)}
@@ -98,7 +100,7 @@ const ChatDokterPage = () => {
               <ChatMessage message="Dok saya ingin berkonsultasi" time="10:17" />
               <ChatMessage message="Dok, kucing saya sering sakit akhir-akhir ini" time="10:17" />
             </div>
-            {/* Tombol "Kirim" dihapus */}
+            {/* Tombol kirim dihapus */}
           </div>
         </div>
       </div>
