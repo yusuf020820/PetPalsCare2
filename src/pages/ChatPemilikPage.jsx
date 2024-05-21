@@ -1,3 +1,4 @@
+import Wira from '../assets/images/Wira.png'
 import React, { useState } from 'react';
 import { FaMapMarkerAlt, FaClock, FaHandshake, FaCamera } from 'react-icons/fa';
 
@@ -13,11 +14,12 @@ const chatData = [
   { id: 9, sender: 'user', message: 'Siap🐕 Meluncur abangku🔥🔥🔥', time: '18:12' }
 ];
 
-const ChatMessage = ({ sender, message, time }) => {
+const ChatMessage = ({ sender, message, time, photo }) => {
   const isUser = sender === 'user';
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
       <div className={`w-full max-w-3xl p-4 rounded-lg shadow-md ${isUser ? 'bg-yellow-100' : 'bg-gray-100'}`}>
+        {photo && <img src={photo} alt="Uploaded" className="mb-2 max-w-xs rounded-lg shadow-md" />}
         <p>{message}</p>
         <p className="text-xs text-gray-500 text-right">{time}</p>
       </div>
@@ -31,12 +33,13 @@ const ChatPemilikPage = () => {
   const [uploadedPhoto, setUploadedPhoto] = useState(null);
 
   const handleSendMessage = () => {
-    if (newMessage.trim() !== '') {
+    if (newMessage.trim() !== '' || uploadedPhoto) {
       const newChat = {
         id: messages.length + 1,
         sender: 'user',
         message: newMessage,
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        photo: uploadedPhoto
       };
       setMessages([...messages, newChat]);
       setNewMessage('');
@@ -61,7 +64,7 @@ const ChatPemilikPage = () => {
         <div className="p-6 border-b">
           <h2 className="text-lg font-bold mb-2">Welcome to PetPals Care!</h2>
           <div className="flex items-center mb-2">
-            <img src="https://via.placeholder.com/50" alt="Shiba Inu" className="w-12 h-12 rounded-full mr-4" />
+            <img src="src/assets/images/Wira.png" alt="Wira" className="w-12 h-12 rounded-full mr-4" />
             <div>
               <h3 className="font-bold text-lg">Chat with Pet Owner</h3>
               <div className="flex items-center text-sm text-gray-600">
@@ -78,13 +81,8 @@ const ChatPemilikPage = () => {
         </div>
         <div className="p-6 space-y-4 flex-1 overflow-y-auto">
           {messages.map((chat) => (
-            <ChatMessage key={chat.id} sender={chat.sender} message={chat.message} time={chat.time} />
+            <ChatMessage key={chat.id} sender={chat.sender} message={chat.message} time={chat.time} photo={chat.photo} />
           ))}
-          {uploadedPhoto && (
-            <div className="flex justify-end mb-4">
-              <img src={uploadedPhoto} alt="Uploaded" className="max-w-xs rounded-lg shadow-md" />
-            </div>
-          )}
         </div>
         <div className="p-4 border-t flex items-center">
           <label htmlFor="file-upload" className="flex items-center mr-2">
