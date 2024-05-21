@@ -75,39 +75,39 @@ const doctorData = [
 const petData = [
   {
     id: 1,
-    ras: "Kucing Anggora jawa sumatra sunda hahahaha ",
-    nama: "Si Manis",
-    kelamin: "Betina",
-    usia: "4 Bulan",
+    ras: "Anjing Husky Siberia",
+    nama: "Buddy",
+    kelamin: "Jantan",
+    usia: "2 Tahun",
     imageUrl:
-      "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_rD1FEh8AbGInF4erFbVsD7IjkuymuvjtxUGSztF6YqGfsUicwJqfo7iGhzbEwlC5nn8&usqp=CAU",
   },
   {
     id: 2,
-    ras: "Anjing Golden Retriever",
-    nama: "Si Manis",
+    ras: "Kucing Scottish Fold",
+    nama: "Luna",
     kelamin: "Betina",
-    usia: "4 Bulan",
+    usia: "1 Tahun",
     imageUrl:
-      "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp",
+      "https://asset.kompas.com/crops/W4P3no-vmu-9GnsCWwybHDufncM=/120x34:4222x2768/750x500/data/photo/2021/04/18/607ba95f8d6f7.jpg",
   },
   {
     id: 3,
-    ras: "Kucing Lokal",
-    nama: "Si Manis",
-    kelamin: "Betina",
-    usia: "4 Bulan",
+    ras: "Anjing Beagle",
+    nama: "Max",
+    kelamin: "Jantan",
+    usia: "3 Tahun",
     imageUrl:
-      "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp",
+      "https://asset.kompas.com/crops/Tjk-lZqu-OWdgxYJeMyRjSzz1BQ=/46x0:1832x1191/750x500/data/photo/2022/08/26/63082fb8d14af.jpg",
   },
   {
     id: 4,
-    ras: "Kucing Anggora Persia",
-    nama: "Si Manis",
+    ras: "Kucing Persia",
+    nama: "Mochi",
     kelamin: "Betina",
-    usia: "4 Bulan",
+    usia: "6 Bulan",
     imageUrl:
-      "https://o-cdn-cas.sirclocdn.com/parenting/images/kucing-domestik.width-800.format-webp.webp",
+      "https://trubus.id/wp-content/uploads/2023/10/Perawatan-Kucing-Persia.jpg",
   },
 ];
 
@@ -161,7 +161,7 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
 
 const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
   return (
-    <div className="max-w-xs mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden">
       <img className="w-full h-52 object-cover" src={imageUrl} alt={nama} />
       <div className="p-4">
         <h2 className="text-xl font-bold text-slate-900">{nama}</h2>
