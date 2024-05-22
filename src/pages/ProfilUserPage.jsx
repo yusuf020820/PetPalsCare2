@@ -12,7 +12,7 @@ const ProfilUserPage = () => {
           <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Profil Saya</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Daftar Alamat</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Favorit</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Pasien</a></li>
+            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Posting Hewan Saya</a></li>
             <li className="py-8 px-2"> <a href="http://localhost:5173/"> Keluar</a></li>
           </ul>
         </div>
