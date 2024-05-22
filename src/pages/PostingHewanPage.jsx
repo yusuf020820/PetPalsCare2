@@ -39,19 +39,19 @@ const PostingHewanPage = () => {
 
         <div className="w-1/3 h-screen p-8">
           <ul>
-            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Profil Saya</a></li>
-            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Daftar Alamat</a></li>
-            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Favorit</a></li>
-            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Pesan</a></li>
-            <li className="p-2 hover:bg-gray-200 rounded-lg"><a href="#">Posting Hewan Saya</a></li>
+            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil">Profil Saya</a></li>
+            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Daftar Alamat</a></li>
+            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Favorit</a></li>
+            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Pesan</a></li>
+            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Posting Hewan Saya</a></li>
+            <li className="py-8 px-2"> <a href="http://localhost:5173/"> Keluar</a></li>
           </ul>
         </div>
         <div className=" w-full h-auto p-12">
           <div className="bg-white p-4 rounded-xl w-full h-full shadow-2xl">
             <h1 className="p-4"> Postingan Hewan Saya </h1>
             <div className="px-4 py-2 ">
-              <button className=" text-white  py-2 px-4 rounded-md bg-[#DE9455]
-hover:bg-[#D68B4B]"> + Posting Hewan</button>
+              <button className=" text-white  py-2 px-4 rounded-md bg-[#DE9455] hover:bg-[#D68B4B]"> <a href="/Upload-hewan"> + Posting Hewan</a></button>
             </div>
             {/* Grid */}
             <div className="container mx-auto p-4">

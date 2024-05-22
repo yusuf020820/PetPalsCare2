@@ -9,7 +9,7 @@ function NavbarAfter() {
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center py-2 px-2">
+            <a href="/Beranda" className="flex items-center py-2 px-2">
               <img src="logo.png" alt="Logo" className="h-16 w-15" />
             </a>
           </div>
