@@ -17,7 +17,7 @@ const Card = ({ image, doctorName, specialty, experience }) => (
       <p className="text-[#667479] text-xs mb-4" style={{ textAlign: 'justify' }}>Pengalaman: {experience}</p>
       <div className="flex justify-center mt-2">
         <a href="/Detail-dokter-pria">
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-8 rounded-full">Lihat Detail</button>
+        <button className="bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-8 rounded-full">Lihat Detail</button>
         </a>
       </div>
     </div>
