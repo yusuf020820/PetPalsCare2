@@ -115,7 +115,8 @@ const PopUpKonfirmasi = () => {
               )}
             </div>
             <div className='flex justify-center border border-black bg-[#f7a660] hover:bg-[#DE9455]'>
-              <button>Konfirmasi</button>
+              <button>
+                <a href="/Konsultasi-dokter">Konfirmasi</a></button>
             </div>
           </div>
         ))}
