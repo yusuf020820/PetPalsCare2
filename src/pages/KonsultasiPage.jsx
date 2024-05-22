@@ -36,7 +36,7 @@ const Chat = () => {
           </div>
           <div>
             <h3 className="text-lg font-medium">Drh. Muhammad Ali</h3>
-            <p className="text-sm text-white-500">Online</p>
+            <p className="text-sm text-gray-500">Online</p>
           </div>
         </div>
         <button className="text-orange-500 font-semibold">Selesai</button>
@@ -56,9 +56,7 @@ const Chat = () => {
             style={{ resize: 'none' }}
           />
           <button className="text-white bg-orange-500 p-2 rounded-full shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 14h18M7 18h10M7 6h10" />
-            </svg>
+            Kirim
           </button>
         </div>
       </div>
