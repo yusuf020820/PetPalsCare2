@@ -320,7 +320,8 @@ const HomepageBefore = () => {
           </div>
           <a href="/Login-PetPalsCare">
           <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
-            <span className="text-white">Tampilkan Semua</span>
+            <a href="/Adopsi-hewan" className="text-white">Tampilkan Semua</a>
+          
           </button>
           </a>
         </div>

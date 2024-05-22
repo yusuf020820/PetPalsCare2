@@ -39,7 +39,7 @@ const Chat = () => {
             <p className="text-sm text-gray-500">Online</p>
           </div>
         </div>
-        <button className="text-orange-500 font-semibold">Selesai</button>
+        <button className="text-orange-500 font-semibold"><a href="/Detail-dokter-pria">Selesai</a></button>
       </div>
 
       <div className="mx-auto max-w-2xl mt-10 p-4 space-y-4">
