@@ -47,9 +47,15 @@ const AdopsiPage = () => {
     <>
       <Navbar />
       <div className=' w-full h-auto pt-8 px-20 container'>
+      <img src="adopsi.png" alt="adopsi" className="w-auto h-auto relative"/>
         <div>
-          <img src="adopsi.png" alt="adopsi" className='px-30'/>
-          
+          <div className="absolute top-1/2 left-3/4 transform -translate-x-1/4 -translate-y-1/2 text-white px-12 py-4 text-left w-full max-w-full">
+          <h1 className="text-3xl font-bold mb-2">Temukan Sahabat Baru:</h1>
+          <h2 className="text-xl font-semibold mb-2">Adopsi Hewan</h2>
+          <h2 className="text-xl font-semibold mb-2">Berikan Kasih Sayang</h2>
+          <h4 className="text-2xs mb-2" style={{ fontSize: '0.5rem' }}>"Satu tindakan, satu ikatan, satu keluarga, jadilah bagian</h4>
+          <h className="text-2xs mb-2" style={{ fontSize: '0.5rem' }}>dari perubahan dengan mengadopsi hari</h>
+        </div>
         </div>
 
         <div >
