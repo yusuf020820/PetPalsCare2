@@ -55,9 +55,11 @@ function NavbarAfter() {
               </span>
             </div>
             <div className="relative">
-              <button className="ml-[120px] flex items-center justify-center w-12 h-12 bg-white border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#f89b59] hover:text-white transition duration-300">
-                <i className="fas fa-user text-lg"></i>
-              </button>
+              <a href="/Profil">
+                <button className="ml-[120px] flex items-center justify-center w-12 h-12 bg-white border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#f89b59] hover:text-white transition duration-300">
+                  <i className="fas fa-user text-lg"></i>
+                </button>
+              </a>
             </div>
           </div>
 
@@ -117,9 +119,9 @@ function NavbarAfter() {
         </div>
         <div className="flex justify-center py-2 px-4 mx-4 my-2">
           <a href="/Profil">
-          <button className="flex items-center justify-center w-12 h-12 bg-white border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#f89b59] hover:text-white transition duration-300">
-          <i className="fas fa-user text-lg"></i>
-          </button>
+            <button className="flex items-center justify-center w-12 h-12 bg-white border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#f89b59] hover:text-white transition duration-300">
+              <i className="fas fa-user text-lg"></i>
+            </button>
           </a>
         </div>
       </div>
