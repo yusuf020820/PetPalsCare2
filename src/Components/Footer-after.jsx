@@ -67,7 +67,7 @@ const Footer = () => {
               <NavLink link="/Tentang-PetPalsCare" label="Tentang Kami" />
             </LinkGroup>
             <LinkGroup header="Kontak">
-              <NavLink link="/#" label="Kota Kediri, Jawa Timur" />
+              <NavLink link="https://www.google.com/maps/place/Kediri,+Kediri+Regency,+East+Java/@-7.8424141,111.9337856,12z/data=!3m1!4b1!4m6!3m5!1s0x2e78570dfd6e0647:0x25037b968333d9b2!8m2!3d-7.8480156!4d112.0178286!16s%2Fm%2F025vkkq?entry=ttu" label="Kota Kediri, Jawa Timur" />
               <NavLink link="/#" label="petpalscare@gmail.com" />
             </LinkGroup>
 
