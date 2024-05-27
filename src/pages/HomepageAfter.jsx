@@ -188,7 +188,7 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
 
 const HomepageBefore = () => {
   return (
-    <div className="font-poppins">
+    <div>
       <div>
         <NavbarAfter />
       </div>

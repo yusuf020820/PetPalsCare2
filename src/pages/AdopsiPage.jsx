@@ -103,7 +103,7 @@ const AdopsiPage = () => {
       <Navbar />
       <div className=" w-full h-auto pt-8 px-20 container font-poppins">
         <img src="adopsi.png" alt="adopsi" className="w-auto h-auto relative" />
-        <div className="absolute top-1/2 left-[60rem] transform -translate-x-1/4 -translate-y-1/2 text-white px-12 py-4 text-left w-full max-w-full">
+        <div className="absolute top-1/2 left-3/4 transform -translate-x-1/4 -translate-y-1/2 text-white px-12 py-4 text-left w-full max-w-full">
           <h1 className="text-4xl font-bold mb-2">Temukan Sahabat Baru</h1>
           <h2 className="text-xl font-semibold">Adopsi Hewan </h2>
           <h2 className="text-xl font-semibold mb-2">Berikan Kasih Sayang</h2>
