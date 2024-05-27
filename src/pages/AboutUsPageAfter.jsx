@@ -1,14 +1,14 @@
-import Foto1 from '../assets/images/fotoaboutus1.png'
-import Foto2 from '../assets/images/fotoaboutus2.png'
-import Foto3 from '../assets/images/fotoaboutus3.jpg'
-import Footer from '../Components/Footer-after';
+import Foto1 from "../assets/images/fotoaboutus1.png";
+import Foto2 from "../assets/images/fotoaboutus2.png";
+import Foto3 from "../assets/images/fotoaboutus3.jpg";
+import Footer from "../Components/Footer-after";
 import Navbar from "../Components/Navbar-after";
 
 const AboutUsPage = () => {
   return (
     <>
       <Navbar />
-      <div>
+      <div className="font-poppins">
         <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white">
           <div className="container mx-auto">
             <div className="flex flex-wrap items-center justify-between -mx-4">
@@ -16,27 +16,15 @@ const AboutUsPage = () => {
                 <div className="flex items-center -mx-3 sm:-mx-4">
                   <div className="w-full px-3 sm:px-4 xl:w-1/2">
                     <div className="py-3 sm:py-4">
-                      <img
-                        src={Foto1}
-                        alt=""
-                        className="w-full rounded-2xl"
-                      />
+                      <img src={Foto1} alt="" className="w-full rounded-2xl" />
                     </div>
                     <div className="py-3 sm:py-4">
-                      <img
-                        src={Foto2}
-                        alt=""
-                        className="w-full rounded-2xl"
-                      />
+                      <img src={Foto2} alt="" className="w-full rounded-2xl" />
                     </div>
                   </div>
                   <div className="w-full px-3 sm:px-4 xl:w-1/2">
                     <div className="relative z-10 my-4">
-                      <img
-                        src={Foto3}
-                        alt=""
-                        className="w-full rounded-2xl"
-                      />
+                      <img src={Foto3} alt="" className="w-full rounded-2xl" />
                       <span className="absolute -right-7 -bottom-7 z-[-1]">
                         <svg
                           width={134}
@@ -618,26 +606,36 @@ const AboutUsPage = () => {
                     Tentang PetPals Care
                   </span>
                   <h2 className="mb-5 text-3xl font-semibold text-dark sm:text-[28px]/[34px]">
-                    PetPals Care adalah platform yang didedikasikan untuk meningkatkan kesejahteraan hewan peliharaan.
+                    PetPals Care adalah platform yang didedikasikan untuk
+                    meningkatkan kesejahteraan hewan peliharaan.
                   </h2>
                   <p className="mb-5 text-base text-black dark:text-black">
-                    Di PetPals Care, kami melihat hewan peliharaan sebagai bagian integral dari keluarga Anda.
-                    Dengan komitmen kami terhadap kesejahteraan mereka, kami menyediakan sumber informasi kesehatan yang andal dan layanan adopsi yang aman.
-                    Dari mencari dokter hewan terdekat hingga konsultasi telemedicine, kami hadir untuk memudahkan Anda dalam memberikan perawatan terbaik bagi teman berbulu Anda.
+                    Di PetPals Care, kami melihat hewan peliharaan sebagai
+                    bagian integral dari keluarga Anda. Dengan komitmen kami
+                    terhadap kesejahteraan mereka, kami menyediakan sumber
+                    informasi kesehatan yang andal dan layanan adopsi yang aman.
+                    Dari mencari dokter hewan terdekat hingga konsultasi
+                    telemedicine, kami hadir untuk memudahkan Anda dalam
+                    memberikan perawatan terbaik bagi teman berbulu Anda.
                   </p>
-                  <p className="mb-8 text-base text-body-color dark:text-black">
-                    Tim kami terdiri dari individu yang bersemangat untuk inovasi, siap membantu Anda dalam setiap langkah perjalanan Anda sebagai pemilik hewan peliharaan.
-                    Kami memprioritaskan layanan yang ramah, informatif, dan berorientasi pada kebutuhan Anda dan hewan peliharaan Anda.
-                    Bergabunglah dengan PetPals Care hari ini dan mari kita bersama-sama menciptakan kehidupan yang lebih baik untuk teman-teman berbulu kita!
+                  <p className="mb-8 text-base text-black dark:text-black">
+                    Tim kami terdiri dari individu yang bersemangat untuk
+                    inovasi, siap membantu Anda dalam setiap langkah perjalanan
+                    Anda sebagai pemilik hewan peliharaan. Kami memprioritaskan
+                    layanan yang ramah, informatif, dan berorientasi pada
+                    kebutuhan Anda dan hewan peliharaan Anda. Bergabunglah
+                    dengan PetPals Care hari ini dan mari kita bersama-sama
+                    menciptakan kehidupan yang lebih baik untuk teman-teman
+                    berbulu kita!
                   </p>
 
-                  <style jsx>{` 
-                .text-custom-color {
-                  color: #ED9455;
-                  font-size: 36px; 
-                  font-weight: 600;
-                }
-                `}</style>
+                  <style jsx>{`
+                    .text-custom-color {
+                      color: #ed9455;
+                      font-size: 36px;
+                      font-weight: 600;
+                    }
+                  `}</style>
                 </div>
               </div>
             </div>
@@ -647,8 +645,7 @@ const AboutUsPage = () => {
 
       <Footer />
     </>
+  );
+};
 
-  )
-}
-
-export default AboutUsPage
+export default AboutUsPage;

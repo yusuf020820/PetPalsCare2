@@ -7,33 +7,21 @@ import Footer from "../Components/Footer-after";
 
 // Komponen Kartu (Card) yang menerima properti teks
 const Card = ({ image, doctorName, specialty, experience }) => (
-  <div className="w-1/4 rounded overflow-hidden shadow-2xl flex flex-col font-poppins">
-    <img className="h-auto w-full" src={image} alt="Dokter" />
-    <div className="px-6 py-4 flex-grow flex flex-col justify-between text-center">
-      <div className="font-bold text-xl mb-2">
-        <h1 className="text-lg" style={{ whiteSpace: "nowrap" }}>
-          {doctorName}
-        </h1>
-      </div>
-      <p
-        className="text-[#667479] text-xs mb-2"
-        style={{ textAlign: "justify" }}
-      >
-        Spesialis: {specialty}
+  <div className="max-w-sm bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center font-poppins">
+    <img className="w-full h-72 object-fill" src={image} alt="Dokter" />
+    <div className="p-4 flex flex-col items-start w-full">
+      <h2 className="text-xl font-semibold text-slate-900 line-clamp-1">
+        {doctorName}
+      </h2>
+      <p className="text-gray-500 text-sm mt-2 line-clamp-1">
+        <span className="font-medium">Spesialis:</span> {specialty}
       </p>
-      <p
-        className="text-[#667479] text-xs mb-4"
-        style={{ textAlign: "justify" }}
-      >
-        Pengalaman: {experience}
+      <p className="text-gray-500 text-sm mt-1">
+        <span className="font-medium">Pengalaman:</span> {experience}
       </p>
-      <div className="flex justify-center mt-2">
-        <a href="/Detail-dokter-pria">
-          <button className="bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-8 rounded-full">
-            Lihat Detail
-          </button>
-        </a>
-      </div>
+      <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
+        Lihat Detail
+      </button>
     </div>
   </div>
 );
@@ -117,7 +105,7 @@ const DokterHewanPage = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-auto pt-8 px-20 container relative">
+      <div className="w-full h-auto pt-8 px-20 container relative font-poppins">
         <img
           src={DokterHewan}
           alt="Dokter Hewan"

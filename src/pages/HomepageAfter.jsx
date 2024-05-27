@@ -127,35 +127,23 @@ const Card = ({ Imgurl, text, description }) => {
 
 const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
   return (
-    <div className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
-      <div className="w-auto h-52 bg-white rounded-[10px] justify-center items-center ">
-        <img className="w-auto h-52" src={imageUrl} alt={name} />
-      </div>
-      <div className="px-2 pt-2 pb-5 flex-col justify-start items-start gap-2.5 flex">
-        <div className="flex-col justify-start items-start gap-1 flex">
-          <div className="self-stretch text-slate-900 text-xl font-normal leading-10">
-            {name}
-          </div>
-          <div className="self-stretch justify-start items-start gap-1 inline-flex">
-            <div className="justify-start items-start gap-1.5 flex">
-              <div className="w-[61px] h-[18px] text-gray-500 text-xs font-black">
-                Spesialis:
-              </div>
-              <div className="w-[171px] h-[18px] text-gray-500 text-xs font-normal">
-                {specialty}
-              </div>
-            </div>
-          </div>
-          <div className="justify-start items-start gap-1.5 inline-flex">
-            <div className="text-gray-500 text-xs font-black">Pengalaman:</div>
-            <div className="text-gray-500 text-xs font-normal">
-              {experience}
-            </div>
-          </div>
-        </div>
-        <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-          Lihat Detail
-        </button>
+    <div className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden">
+      <img className="w-full h-52 object-contain" src={imageUrl} alt={name} />
+      <div className="p-4 flex flex-col items-start w-full">
+        <h2 className="text-xl font-semibold text-slate-900 line-clamp-1">
+          {name}
+        </h2>
+        <p className="text-gray-500 text-sm mt-2 line-clamp-1">
+          <span className="font-medium">Spesialis:</span> {specialty}
+        </p>
+        <p className="text-gray-500 text-sm mt-1">
+          <span className="font-medium">Pengalaman:</span> {experience}
+        </p>
+        <a href="/Detail-dokter-pria" className="w-full text-center">
+          <button className="mt-4 py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300 w-full">
+            Lihat Detail
+          </button>
+        </a>
       </div>
     </div>
   );
@@ -165,18 +153,15 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
   return (
     <div className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden">
       <img className="w-full h-52 object-cover" src={imageUrl} alt={nama} />
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-slate-900">{nama}</h2>
-        <div className="mt-2 text-gray-600">
-          <p className="line-clamp-1">
-            <span className="font-semibold">Ras:</span> {ras}
-          </p>
-          <p>
-            <span className="font-semibold">Kelamin:</span> {kelamin}
-          </p>
-          <p>
-            <span className="font-semibold">Usia:</span> {usia}
-          </p>
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">
+          <h1>{ras}</h1>
+        </div>
+        <p className="text-[#667479] text-sm">Nama: {nama}</p>
+        <div className="flex gap-2 items-center">
+          <p className="text-[#667479] text-sm">Kelamin: {kelamin}</p>
+          <span className="text-[#667479] text-sm">&bull;</span>
+          <p className="text-[#667479] text-sm">Usia: {usia}</p>
         </div>
         <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
           Lihat Detail
@@ -188,7 +173,7 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
 
 const HomepageBefore = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <div>
         <NavbarAfter />
       </div>
@@ -197,7 +182,7 @@ const HomepageBefore = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute left-[130px] top-[180px]">
-          <div className="text-neutral-800 text-5xl font-bold font-sans capitalize leading-[68px]">
+          <div className="text-neutral-800 text-5xl font-bold leading-[68px]">
             Hewan Sehat, Hati Bahagia
             <p>Temukan Perawatan Terbaik</p>
           </div>
@@ -274,7 +259,7 @@ const HomepageBefore = () => {
             </button>
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {doctorData.map((doctor) => (
             <DoctorCard
               key={doctor.id}
@@ -327,7 +312,7 @@ const HomepageBefore = () => {
             <span className="text-white">Tampilkan Semua</span>
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {petData.map((pet) => (
             <PetCard
               key={pet.id}
