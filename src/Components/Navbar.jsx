@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React, { useState } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#F7DBA7] shadow-lg">
+    <nav className="bg-[#F7DBA7] shadow-lg font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
@@ -17,32 +17,70 @@ const Navbar = () => {
 
           {/* Nav Links */}
           <div className="hidden md:flex space-x-10 font-sans">
-            <a href="/" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Beranda</a>
-            <a href="#rekomendasi-dokter" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Cari Dokter</a>
-            <a href="#adopsi" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Adopsi</a>
-            <a href="/Tentang-kami" className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300">Tentang Kami</a>
+            <a
+              href="/"
+              className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300"
+            >
+              Beranda
+            </a>
+            <a
+              href="#rekomendasi-dokter"
+              className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300"
+            >
+              Cari Dokter
+            </a>
+            <a
+              href="#adopsi"
+              className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300"
+            >
+              Adopsi
+            </a>
+            <a
+              href="/Tentang-kami"
+              className="py-4 px-2 text-black font-medium hover:text-[#ED9455] transition duration-300"
+            >
+              Tentang Kami
+            </a>
           </div>
 
           {/* Search and Auth Buttons */}
           <div className="hidden md:flex items-center space-x-3 font-sans">
             <div className="relative">
-              <input 
-                type="text" 
-                placeholder="Search..." 
-                className="px-5 py-1 pl-10 border rounded-full focus:border-[#DE9455]" 
+              <input
+                type="text"
+                placeholder="Search..."
+                className="px-5 py-1 pl-10 border rounded-full focus:border-[#DE9455]"
               />
               <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
                 <i className="fas fa-search text-gray-500"></i>
               </span>
             </div>
-            <a href="/Daftar-PetPalsCare" className="py-2 px-4 bg-[#F7DBA7] border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#ED9455] hover:text-white transition duration-300">Daftar</a>
-            <a href="/Login-PetPalsCare" className="py-2 px-4 bg-[#ED9455] text-white rounded-full hover:bg-[#f89b59] transition duration-300">Masuk</a>
+            <a
+              href="/Daftar-PetPalsCare"
+              className="py-2 px-4 bg-[#F7DBA7] border border-[#ED9455] text-[#ED9455] rounded-full hover:bg-[#ED9455] hover:text-white transition duration-300"
+            >
+              Daftar
+            </a>
+            <a
+              href="/Login-PetPalsCare"
+              className="py-2 px-4 bg-[#ED9455] text-white rounded-full hover:bg-[#f89b59] transition duration-300"
+            >
+              Masuk
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button className="outline-none" onClick={() => setIsOpen(!isOpen)}>
-              <svg className="w-6 h-6 text-gray-500 hover:text-blue-500" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                className="w-6 h-6 text-gray-500 hover:text-blue-500"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 <path d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
@@ -73,6 +111,6 @@ const Navbar = () => {
       </div> */}
     </nav>
   );
-}
+};
 
 export default Navbar;
