@@ -187,7 +187,7 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
 
 const HomepageBefore = () => {
   return (
-    <div className="font-sans">
+    <div className="font-poppins">
       <div>
         <Navbar />
       </div>
@@ -206,11 +206,10 @@ const HomepageBefore = () => {
             kebahagiaan bagi mereka!
           </div>
           <a href="/Login-PetPalsCare">
-          <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#f89b59] transition duration-300 rounded-full flex justify-center items-center mt-10">
-            <span className="text-white">Jelajahi Sekarang</span>
-          </button>
+            <button className="w-[163px] h-[48px] bg-[#ED9455] hover:bg-[#f89b59] transition duration-300 rounded-full flex justify-center items-center mt-10">
+              <span className="text-white">Jelajahi Sekarang</span>
+            </button>
           </a>
-          
         </div>
       </div>
       <div className="container mx-auto p-8 pt-28">
@@ -257,7 +256,7 @@ const HomepageBefore = () => {
       </div>
       <div className="container mx-auto p-8 pt-28" id="rekomendasi-dokter">
         <div className="flex justify-between items-center mb-10">
-          <div> 
+          <div>
             <div className="text-black text-base font-normal mb-1">
               Ingin berkonsultasi dengan dokter hewan terpercaya?
             </div>
@@ -266,9 +265,9 @@ const HomepageBefore = () => {
             </div>
           </div>
           <a href="/Login-PetPalsCare">
-          <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
-            <span className="text-white">Tampilkan Lainnya</span>
-          </button>
+            <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
+              <span className="text-white">Tampilkan Lainnya</span>
+            </button>
           </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -319,10 +318,11 @@ const HomepageBefore = () => {
             </div>
           </div>
           <a href="/Login-PetPalsCare">
-          <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
-            <a href="/Adopsi-hewan" className="text-white">Tampilkan Semua</a>
-          
-          </button>
+            <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
+              <a href="/Adopsi-hewan" className="text-white">
+                Tampilkan Semua
+              </a>
+            </button>
           </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
