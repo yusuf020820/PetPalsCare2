@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import heroImage from "../assets/images/hero-home.jpg";
 import image1 from "../assets/images/vectorhome1.png";
@@ -10,6 +10,8 @@ import doktercwe from "../assets/images/DokterCewe.png";
 import vaksinKucing from "../assets/images/vaksinimg.jpg";
 import adoptionBgImage from "../assets/images/banner2.png";
 import Footer from "../Components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const data = [
   {
@@ -114,7 +116,7 @@ const petData = [
 
 const Card = ({ Imgurl, text, description }) => {
   return (
-    <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
+    <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6" data-aos="fade-up">
       <div className="flex items-center justify-start mb-4">
         <img src={Imgurl} alt={text} className="h-12 w-12" />
       </div>
@@ -126,7 +128,10 @@ const Card = ({ Imgurl, text, description }) => {
 
 const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
   return (
-    <div className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex">
+    <div
+      className="px-2 pt-2 bg-white rounded-xl shadow flex-col justify-start items-center gap-2 inline-flex"
+      data-aos="fade-up"
+    >
       <div className="w-auto h-52 bg-white rounded-[10px] justify-center items-center ">
         <img className="w-auto h-52" src={imageUrl} alt={name} />
       </div>
@@ -162,7 +167,10 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
 
 const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
   return (
-    <div className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden">
+    <div
+      className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden"
+      data-aos="fade-up"
+    >
       <img className="w-full h-52 object-cover" src={imageUrl} alt={nama} />
       <div className="p-4">
         <h2 className="text-xl font-bold text-slate-900">{nama}</h2>
@@ -186,6 +194,10 @@ const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
 };
 
 const HomepageBefore = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="font-poppins">
       <div>
@@ -194,8 +206,12 @@ const HomepageBefore = () => {
       <div
         className="relative w-full h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
+        data-aos="fade-in"
       >
-        <div className="absolute left-[130px] top-[180px]">
+        <div
+          className="absolute left-[130px] top-[180px]"
+          data-aos="fade-right"
+        >
           <div className="text-neutral-800 text-5xl font-bold font-sans capitalize leading-[68px]">
             Hewan Sehat, Hati Bahagia
             <p>Temukan Perawatan Terbaik</p>
@@ -225,14 +241,17 @@ const HomepageBefore = () => {
         </div>
       </div>
       <div className="container mx-auto p-8 flex flex-col lg:flex-row items-center gap-8 pt-28">
-        <div className="w-full lg:w-1/2 h-[23rem] overflow-hidden rounded-lg">
+        <div
+          className="w-full lg:w-1/2 h-[23rem] overflow-hidden rounded-lg"
+          data-aos="fade-right"
+        >
           <img
             src={vaksinKucing}
             alt="vaksin"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2" data-aos="fade-left">
           <h2 className="text-4xl font-bold mb-10">Vaksinasi dan Imunisasi</h2>
           <div className="text-gray-700 space-y-4 leading-relaxed">
             <p>
@@ -256,7 +275,7 @@ const HomepageBefore = () => {
       </div>
       <div className="container mx-auto p-8 pt-28" id="rekomendasi-dokter">
         <div className="flex justify-between items-center mb-10">
-          <div>
+          <div data-aos="fade-right">
             <div className="text-black text-base font-normal mb-1">
               Ingin berkonsultasi dengan dokter hewan terpercaya?
             </div>
@@ -265,7 +284,10 @@ const HomepageBefore = () => {
             </div>
           </div>
           <a href="/Login-PetPalsCare">
-            <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
+            <button
+              className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center"
+              data-aos="fade-left"
+            >
               <span className="text-white">Tampilkan Lainnya</span>
             </button>
           </a>
@@ -285,8 +307,12 @@ const HomepageBefore = () => {
       <div
         className="relative w-full h-screen bg-cover bg-center mt-10"
         style={{ backgroundImage: `url(${adoptionBgImage})` }}
+        data-aos="fade-in"
       >
-        <div className="absolute left-[130px] top-[120px] w-full lg:w-1/2">
+        <div
+          className="absolute left-[130px] top-[120px] w-full lg:w-1/2"
+          data-aos="fade-right"
+        >
           <h2 className="text-4xl font-bold mb-10 leading-tight font">
             Manfaat Mempelihara Hewan Membawa Kebahagiaan dalam Kehidupan Anda
           </h2>
@@ -309,7 +335,7 @@ const HomepageBefore = () => {
       </div>
       <div className="container mx-auto p-8 pt-32" id="adopsi">
         <div className="flex justify-between items-center mb-10">
-          <div>
+          <div data-aos="fade-right">
             <div className="text-black text-base font-normal mb-1">
               Ingin mengadopsi hewan peliharaan yang lucu?
             </div>
@@ -318,7 +344,10 @@ const HomepageBefore = () => {
             </div>
           </div>
           <a href="/Login-PetPalsCare">
-            <button className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center">
+            <button
+              className="bg-[#ED9455] py-2 px-4 hover:bg-[#f89b59] transition duration-300 rounded-md flex justify-center items-center"
+              data-aos="fade-left"
+            >
               <a href="/Adopsi-hewan" className="text-white">
                 Tampilkan Semua
               </a>
@@ -338,7 +367,6 @@ const HomepageBefore = () => {
           ))}
         </div>
       </div>
-      \
       <Footer />
     </div>
   );

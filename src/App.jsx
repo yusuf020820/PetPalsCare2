@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react";
 import Navbar from "./Components/Navbar";
 import Notfound from "./Components/Notfound";
