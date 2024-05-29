@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import "./index.css";
 import React from "react";
 import Navbar from "./Components/Navbar";
 import Notfound from "./Components/Notfound";
@@ -27,7 +28,6 @@ import DokterHewanPage from "./pages/DokterHewanPage";
 import PopUpKonfirmasi from "./pages/PopUpKonfirmasi";
 import PopUpPosting from "./pages/PopUpPosting";
 import Verifikasi from "./pages/VerifikasiPage";
-
 
 function App() {
   return (
@@ -58,10 +58,7 @@ function App() {
         <Route path="/Upload-hewan" Component={PopUpPosting} />
         <Route path="/Verifikasi" Component={Verifikasi} />
       </Routes>
-
     </div>
-
-    
   );
 }
 
