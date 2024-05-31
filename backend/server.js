@@ -17,7 +17,7 @@ app.post("/login", (req, res) => {
     }
 
     if (results.length > 0) {
-      // Mengembalikan data pengguna
+      // Mengembalikan data user
       const user = results[0];
       res.status(200).json({ message: "Login successful", user });
     } else {
@@ -43,6 +43,62 @@ app.post("/register", (req, res) => {
       res.status(200).json({ message: "Registration successful" });
     }
   );
+});
+
+app.post("/register-dokter", (req, res) => {
+  const {
+    nama,
+    no_hp,
+    alamat_praktek,
+    email,
+    password,
+    gender,
+    usia,
+    lulusan,
+    spesialis,
+    biaya,
+    pengalaman,
+  } = req.body;
+
+  const query =
+    "INSERT INTO dokter (nama, no_hp, alamat, email, password, gender, usia, lulusan, spesialis, biaya, pengalaman) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  db.query(
+    query,
+    [
+      nama,
+      no_hp,
+      alamat_praktek,
+      email,
+      password,
+      gender,
+      usia,
+      lulusan,
+      spesialis,
+      biaya,
+      pengalaman,
+    ],
+    (err, results) => {
+      if (err) {
+        console.error("Database error:", err);
+        return res.status(500).json({ message: "Database error", error: err });
+      }
+
+      res.status(200).json({ message: "Dokter registration successful" });
+    }
+  );
+});
+
+// Endpoint untuk mendapatkan data dokter
+app.get("/api/dokter", (req, res) => {
+  const query = "SELECT nama, spesialis, pengalaman FROM dokter";
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error("Database error:", err);
+      return res.status(500).json({ message: "Database error", error: err });
+    }
+
+    res.status(200).json({ dokter: results });
+  });
 });
 
 app.listen(8081, () => {

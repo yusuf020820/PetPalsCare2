@@ -1,9 +1,9 @@
-import React from "react";
-import DokterCewe from "../assets/images/DokterCewe.png";
+import React, { useState, useEffect } from "react";
 import DokterCowo from "../assets/images/DokterCowo.png";
 import DokterHewan from "../assets/images/DokterHewan.png";
 import Navbar from "../Components/Navbar-after";
 import Footer from "../Components/Footer-after";
+import axios from "axios";
 
 // Komponen Kartu (Card) yang menerima properti teks
 const Card = ({ image, doctorName, specialty, experience }) => (
@@ -27,80 +27,20 @@ const Card = ({ image, doctorName, specialty, experience }) => (
 );
 
 const DokterHewanPage = () => {
-  const cardsData = [
-    {
-      image: DokterCowo,
-      doctorName: "Drh. Muhammad Ali",
-      specialty: "Hewan Domestik dan Eksotik",
-      experience: "7 Tahun",
-    },
-    {
-      image: DokterCewe,
-      doctorName: "Drh. Zahra Salsabila",
-      specialty: "Kucing dan Anjing",
-      experience: "7 Tahun",
-    },
-    {
-      image: DokterCowo,
-      doctorName: "Drh. Septian Priatama",
-      specialty: "Hewan Ternak dan Unggas",
-      experience: "7 Tahun",
-    },
-    {
-      image: DokterCewe,
-      doctorName: "Drh. Ami Kosriami",
-      specialty: "Anjing dan Kucing, Ternak",
-      experience: "7 Tahun",
-    },
-    {
-      image: DokterCowo,
-      doctorName: "Drh. Arjuna Wijaya",
-      specialty: "Hewan Domestik dan Eksotik",
-      experience: "10 Tahun",
-    },
-    {
-      image: DokterCewe,
-      doctorName: "Drh. Silvia Candra",
-      specialty: "Kucing dan Anjing",
-      experience: "5 Tahun",
-    },
-    {
-      image: DokterCowo,
-      doctorName: "Drh. Dimas Pratama",
-      specialty: "Hewan Ternak dan Unggas",
-      experience: "10 Tahun",
-    },
-    {
-      image: DokterCewe,
-      doctorName: "Drh. Diyah Pitaloka",
-      specialty: "Anjing dan Kucing, Ternak",
-      experience: "7 Tahun",
-    },
-    {
-      image: DokterCowo,
-      doctorName: "H.M.A.Cholik",
-      specialty: "Hewan Domestik dan Eksotik",
-      experience: "7 Tahun",
-    },
-    {
-      image: DokterCewe,
-      doctorName: "Drh. Anindita Ika A",
-      specialty: "Kucing dan Anjing",
-      experience: "5 Tahun",
-    },
-    {
-      image: DokterCowo,
-      doctorName: "Drh. Cokro Susmito",
-      specialty: "Hewan Ternak dan Unggas",
-      experience: "7 Tahun",
-    },
-    {
-      image: DokterCewe,
-      doctorName: "Drh. Yana Rosa",
-      specialty: "Anjing dan Kucing, Ternak",
-      experience: "7 Tahun",
-    },
-  ];
+  const [dokterData, setDokterData] = useState([]);
+
+  useEffect(() => {
+    const fetchDokterData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8081/api/dokter");
+        setDokterData(response.data.dokter);
+      } catch (error) {
+        console.error("There was an error fetching the dokter data!", error);
+      }
+    };
+
+    fetchDokterData();
+  }, []);
 
   return (
     <>
@@ -125,10 +65,16 @@ const DokterHewanPage = () => {
         <div>
           {[...Array(3)].map((_, sectionIndex) => (
             <div key={sectionIndex} className="py-8 flex gap-4">
-              {cardsData
+              {dokterData
                 .slice(sectionIndex * 4, sectionIndex * 4 + 4)
-                .map((card, index) => (
-                  <Card key={index} {...card} />
+                .map((doctor, index) => (
+                  <Card
+                    key={index}
+                    image={DokterCowo} // Anda bisa mengganti ini dengan gambar yang sesuai untuk setiap dokter
+                    doctorName={doctor.nama}
+                    specialty={doctor.spesialis}
+                    experience={doctor.pengalaman}
+                  />
                 ))}
             </div>
           ))}
