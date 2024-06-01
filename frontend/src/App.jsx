@@ -24,8 +24,7 @@ import AdopsiPage from "./pages/AdopsiPage";
 import KonsultasiPage from "./pages/KonsultasiPage";
 import AboutUsPageBefore from "./pages/AboutUsPageBefore";
 import AboutUsPageAfter from "./pages/AboutUsPageAfter";
-import DetailDokterCowo from "./pages/DetailDokterCowo";
-import DetailDokterCewe from "./pages/DetailDokterCewe";
+import DetailDokter from "./pages/DetailDokter";
 import DokterHewanPage from "./pages/DokterHewanPage";
 import PopUpKonfirmasi from "./pages/PopUpKonfirmasi";
 import PopUpPosting from "./pages/PopUpPosting";
@@ -53,8 +52,7 @@ function App() {
         <Route path="/Konsultasi-dokter" Component={KonsultasiPage} />
         <Route path="/Tentang-kami" Component={AboutUsPageBefore} />
         <Route path="/Tentang-PetPalsCare" Component={AboutUsPageAfter} />
-        <Route path="/Detail-dokter-pria" Component={DetailDokterCowo} />
-        <Route path="/Detail-dokter-wanita" Component={DetailDokterCewe} />
+        <Route path="/Detail-dokter" Component={DetailDokter} />
         <Route path="/Daftar-dokter-hewan" Component={DokterHewanPage} />
         <Route path="/Pop-Up-Konfirmasi" Component={PopUpKonfirmasi} />
         <Route path="/Upload-hewan" Component={PopUpPosting} />

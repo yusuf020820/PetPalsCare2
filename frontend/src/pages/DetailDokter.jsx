@@ -89,7 +89,7 @@ const Example = () => {
   );
 };
 
-const DetailDokterCowo = () => {
+const DetailDokter = () => {
   return (
     <>
       <Navbar />
@@ -99,4 +99,4 @@ const DetailDokterCowo = () => {
   );
 };
 
-export default DetailDokterCowo;
+export default DetailDokter;
