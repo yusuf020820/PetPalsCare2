@@ -6,10 +6,14 @@ const ProfilDokter = () => {
   const [dokterData, setDokterData] = useState(null);
 
   useEffect(() => {
+    console.log("useEffect berjalan");
     // Ambil data dokter dari localStorage
     const storedDokterData = localStorage.getItem("dokterData");
     if (storedDokterData) {
+      console.log("Data ditemukan di localStorage:", storedDokterData);
       setDokterData(JSON.parse(storedDokterData));
+    } else {
+      console.log("Tidak ada data yang ditemukan di localStorage");
     }
   }, []);
 
@@ -29,16 +33,16 @@ const ProfilDokter = () => {
             <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg">
               <a href="/Profil-dokter">Profil Saya</a>
             </li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg">
+            <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg">
               <a href="#">Daftar Alamat</a>
             </li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg">
+            <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg">
               <a href="#">Favorit</a>
             </li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg">
+            <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg">
               <a href="/Chat-dokter">Pasien</a>
             </li>
-            <li className="py-2 px-2  hover:bg-gray-400 border-collapse rounded-lg">
+            <li className="py-2 px-2 hover:bg-gray-400 border-collapse rounded-lg">
               <button onClick={handleLogout}>Keluar</button>
             </li>
           </ul>
@@ -46,59 +50,59 @@ const ProfilDokter = () => {
 
         <div className="w-full h-auto p-12">
           <div className="bg-white p-10 rounded-xl w-full h-auto shadow-2xl">
-            <h1 className="py-4 font-bold text-1xl"> Profil Saya</h1>
-            {dokterData && (
-              <div className="flex justify-start items-center gap-4 pt-6">
-                <div className="w-[100px] h-[100px] bg-orange-400 rounded-full flex justify-center items-center">
-                  <p>{dokterData.nama.substring(0, 2)}</p>
+            <h1 className="py-4 font-bold text-1xl">Profil Saya</h1>
+            {dokterData ? (
+              <>
+                <div className="flex justify-start items-center gap-4 pt-6">
+                  <div className="w-[100px] h-[100px] bg-orange-400 rounded-full flex justify-center items-center">
+                    <p>{dokterData.nama.substring(0, 2)}</p>
+                  </div>
+
+                  <div>
+                    <h1>{`Drh. ${dokterData.nama}`}</h1>
+                    <p>Dokter Hewan</p>
+                  </div>
                 </div>
 
-                <div>
-                  <h1>{`Drh. ${dokterData.nama}`}</h1>
-                  <p>Dokter Hewan</p>
+                <div className="h-1/2 flex justify-start gap-8 items-center w-full h-auto gap-28">
+                  <div className="py-4">
+                    <p>Umur</p>
+                    <p>{dokterData.usia}</p>
+                  </div>
+                  <div className="py-4">
+                    <p>Jenis Kelamin</p>
+                    <p>{dokterData.gender}</p>
+                  </div>
                 </div>
-              </div>
-            )}
-            {dokterData && (
-              <div className=" h-1/2 flex justify-start gap-8 items-center  w-full h-auto gap-28">
+
                 <div className="py-4">
-                  <p>Umur</p>
-                  <p>{dokterData.usia}</p>
+                  <p>Nomor Handphone</p>
+                  <p>{dokterData.no_hp}</p>
                 </div>
+
                 <div className="py-4">
-                  <p>Jenis Kelamin</p>
-                  <p>{dokterData.gender}</p>
+                  <p>Email</p>
+                  <p>{dokterData.email}</p>
                 </div>
-              </div>
+
+                <div className="py-4">
+                  <p>Lulusan</p>
+                  <p>{dokterData.lulusan}</p>
+                </div>
+
+                <div className="py-4">
+                  <p>Spesialis</p>
+                  <p>{dokterData.spesialis}</p>
+                </div>
+
+                <div className="py-4">
+                  <p>Biaya</p>
+                  <p>{dokterData.biaya}</p>
+                </div>
+              </>
+            ) : (
+              <p>Memuat data dokter...</p>
             )}
-            {dokterData && (
-              <div className="py-4">
-                <p>Nomor Handphone</p>
-                <p>{dokterData.no_hp}</p>
-              </div>
-            )}
-            {dokterData && (
-              <div className="py-4">
-                <p>Email</p>
-                <p>{dokterData.email}</p>
-              </div>
-            )}
-            {dokterData && (
-              <div className="py-4">
-                <p>Lulusan</p>
-                <p>{dokterData.lulusan}</p>
-              </div>
-            )}
-            {dokterData && (
-              <div className="py-4">
-                <p>Spesialis</p>
-                <p>{dokterData.spesialis}</p>
-              </div>
-            )}
-            <div className="">
-              <p>Biaya</p>
-              <p>{dokterData.biaya}</p>
-            </div>
           </div>
         </div>
       </div>

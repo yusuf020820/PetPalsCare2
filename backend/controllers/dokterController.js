@@ -2,6 +2,17 @@
 
 const db = require("../database/connection");
 
+exports.getAllDokter = (req, res) => {
+  const query = "SELECT * FROM dokter";
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error("Database error:", err);
+      return res.status(500).json({ message: "Database error", error: err });
+    }
+    res.status(200).json({ dokter: results });
+  });
+};
+
 exports.login = (req, res) => {
   const { email, password } = req.body;
   const query = "SELECT * FROM dokter WHERE email = ? AND password = ?";
