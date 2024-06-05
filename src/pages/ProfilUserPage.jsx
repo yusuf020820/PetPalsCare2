@@ -10,11 +10,11 @@ const ProfilUserPage = () => {
         <div className=" w-1/3 h-screen p-8  ">
           <ul>
           <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil">Profil Saya</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Daftar Alamat</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Favorit</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Pesan</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="/Posting-hewan">Posting Hewan Saya</a></li>
-            <li className="py-8 px-2"> <a href="http://localhost:5173/"> Keluar</a></li>
+            <div className="py-4">
+            <li className="py-2 px-2  hover:bg-gray-400 border-collapse rounded-lg "> <a href="http://localhost:5173/">Keluar</a></li>
+            </div>
           </ul>
         </div>
 

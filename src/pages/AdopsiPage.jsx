@@ -6,9 +6,9 @@ const data = [
   {
     id: 1,
     JenisHewan: "Kucing Anggora",
-    Nama: "Fluffy",
+    Nama   : "Fluffy",
     Kelamin: "Betina",
-    Usia: "2 Bulan",
+    Usia   : "2 Bulan",
     imageUrl: "https://i.ibb.co.com/ckN3v0F/Angora.png",
   },
   {
@@ -54,9 +54,9 @@ const data = [
   {
     id: 7,
     JenisHewan: "Kucing Lokal",
-    Nama: "(Belum Ada)",
+    Nama   : "(Belum Ada)",
     Kelamin: "Jantan",
-    Usia: "2 Bulan",
+    Usia   : "2 Bulan",
     imageUrl: "https://i.ibb.co.com/c8kJ9x9/lokal.png",
   },
   {
@@ -77,11 +77,10 @@ const Card = ({ JenisHewan, Nama, Kelamin, Usia, imageUrl }) => {
         <div className="font-bold text-xl mb-2">
           <h1>{JenisHewan}</h1>
         </div>
-        <p className="text-[#667479] text-sm">Nama: {Nama}</p>
-        <div className="flex gap-2 items-center">
-          <p className="text-[#667479] text-sm">Kelamin: {Kelamin}</p>
-          <span className="text-[#667479] text-sm">&bull;</span>
-          <p className="text-[#667479] text-sm">Usia: {Usia}</p>
+        <div className=" text-xs">
+        <p className="text-[#667479] ">Nama   : {Nama}</p>
+          <p className="text-[#667479] ">Kelamin: {Kelamin}</p>
+          <p className="text-[#667479]">Usia: {Usia}</p>
         </div>
         <a href="/Detail-hewan">
           <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">

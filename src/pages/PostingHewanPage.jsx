@@ -3,30 +3,61 @@ import Footer from '../Components/Footer-after';
 import logo from "../assets/images/logo.png";
 
 const data = [
-  { id: 1, name: 'Kucing Lokal', description: 'Nama : Luo Yen', imageUrl: 'https://i.ibb.co.com/QdPkcz4/ucing.png' },
-  { id: 2, name: 'Anjing Mini', description: 'Nama : Shiro', imageUrl: 'https://i.ibb.co.com/cFrGGyw/persia.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-  { id: 3, name: 'Kucing Lokal', description: 'Tinny', imageUrl: 'https://i.ibb.co.com/J3fMxC4/kucing-lokalan.png' },
-
+  {
+    id: 1,
+    JenisHewan: "Kucing Anggora",
+    Nama: "Fluffy",
+    Kelamin: "Betina",
+    Usia: "2 Bulan",
+    imageUrl: "https://i.ibb.co.com/ckN3v0F/Angora.png",
+  },
+  {
+    id: 2,
+    JenisHewan: "Kelinci Alaska",
+    Nama: "Bunny",
+    Kelamin: "Betina",
+    Usia: "6 Bulan",
+    imageUrl: "https://i.ibb.co.com/WDQmvjH/kelinci.png",
+  },
+  {
+    id: 3,
+    JenisHewan: "Kucing Persia",
+    Nama: "Sassy",
+    Kelamin: "Betina",
+    Usia: "2 Tahun",
+    imageUrl: "https://i.ibb.co.com/K98b2mf/persia.png",
+  },
+  {
+    id: 4,
+    JenisHewan: "Kucing Lokal",
+    Nama: "(Belum Ada)",
+    Kelamin: "Jantan",
+    Usia: "2 Bulan",
+    imageUrl: "https://i.ibb.co.com/c8kJ9x9/lokal.png",
+  },
 ];
 
-// Komponen Card
-const Card = ({ name, description, imageUrl }) => {
+const Card = ({ JenisHewan, Nama, Kelamin, Usia, imageUrl }) => {
   return (
-    <div className="p-4 bg-white border rounded shadow ">
-      <img src={imageUrl} alt={name} className="w-full h-48 object-cover rounded-t" />
-      <div className="p-4">
-        <h2 className="text-lg font-bold mb-2">{name}</h2>
-        <p className="text-gray-700">{description}</p>
+    <div className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden">
+      <img className="w-full h-40 object-cover" src={imageUrl} alt={Nama} />
+      <div className="px-6 py-4">
+        <div className="font-bold text-base mb-2">
+          <h1>{JenisHewan}</h1>
+        </div>
+        <div className="text-xs">
+        <p className="text-[#667479] ">Nama: {Nama}</p>
+          <p className="text-[#667479] ">Kelamin: {Kelamin}</p>
+          <p className="text-[#667479] ">Usia: {Usia}</p>
+          </div>
+          <div className="">
+          <button className="border-2 border-[#ED9455] mt-4 w-full py-1 hover:bg-[#ffc296] text-[#ED9455] rounded-lg transition duration-300">
+           Ubah Data
+          </button>
+          <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
+           Hapus
+          </button>
+              </div>
       </div>
     </div>
   );
@@ -40,11 +71,11 @@ const PostingHewanPage = () => {
         <div className="w-1/3 h-screen p-8">
           <ul>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil">Profil Saya</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Daftar Alamat</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Favorit</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Pesan</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Posting Hewan Saya</a></li>
-            <li className="py-8 px-2"> <a href="http://localhost:5173/"> Keluar</a></li>
+            <div className="py-4">
+            <li className="py-2 px-2  hover:bg-gray-400 border-collapse rounded-lg"> <a href="http://localhost:5173/"> Keluar</a></li>
+            </div>
           </ul>
         </div>
         <div className=" w-full h-auto p-12">
@@ -53,13 +84,25 @@ const PostingHewanPage = () => {
             <div className="px-4 py-2 ">
               <button className=" text-white  py-2 px-4 rounded-md bg-[#DE9455] hover:bg-[#D68B4B]"> <a href="/Upload-hewan"> + Posting Hewan</a></button>
             </div>
+            
             {/* Grid */}
             <div className="container mx-auto p-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
                 {data.map((item) => (
-                  <Card key={item.id} name={item.name} description={item.description} imageUrl={item.imageUrl} />
+                 <Card
+                 key={item.id}
+                 Nama={item.Nama}
+                 JenisHewan={item.JenisHewan}
+                 Kelamin={item.Kelamin}
+                 Usia={item.Usia}
+                 imageUrl={item.imageUrl}
+                 
+               />
                 ))}
+                
               </div>
+             
             </div>
           </div>
         </div>
