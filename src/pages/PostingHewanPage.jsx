@@ -71,7 +71,7 @@ const PostingHewanPage = () => {
         <div className="w-1/3 h-screen p-8">
           <ul>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil">Profil Saya</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Pesan</a></li>
+            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil-chat">Pesan</a></li>
             <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Posting Hewan Saya</a></li>
             <div className="py-4">
             <li className="py-2 px-2  hover:bg-gray-400 border-collapse rounded-lg"> <a href="http://localhost:5173/"> Keluar</a></li>
