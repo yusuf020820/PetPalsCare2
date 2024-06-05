@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaUser, FaMapMarkerAlt, FaHeart, FaSignOutAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaUser, FaMapMarkerAlt, FaHeart, FaSignOutAlt, FaComment , FaPaperPlane , } from 'react-icons/fa';
 
 const patients = [
   { id: 1, name: 'Adi Pragos', message: 'Kak, Saya ingin bertanya soal kucing...', unread: true },
@@ -46,20 +46,16 @@ const ProfilUserChat = () => {
         </div>
         <ul>
           <li className="p-4 flex items-center text-gray-700 hover:bg-gray-100 cursor-pointer">
-            <FaMapMarkerAlt className="text-gray-500 mr-3" />
-            Daftar Alamat
-          </li>
-          <li className="p-4 flex items-center text-gray-700 hover:bg-gray-100 cursor-pointer">
             <FaHeart className="text-gray-500 mr-3" />
             Favorit
           </li>
           <li className="p-4 flex items-center text-gray-700 hover:bg-gray-100 cursor-pointer">
-            <FaUser className="text-gray-500 mr-3" />
-            Pasien
+            <FaComment  className="text-gray-500 mr-3" />
+            Pesan
           </li>
           <li className="p-4 flex items-center text-gray-700 hover:bg-gray-100 cursor-pointer">
-            <FaSignOutAlt className="text-gray-500 mr-3" />
-            Keluar
+            <FaSignOutAlt className="text-gray-500 mr-3" /><a href="/Posting-hewan#">
+            Keluar </a>
           </li>
         </ul>
       </div>
