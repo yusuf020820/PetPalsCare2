@@ -14,25 +14,25 @@ const LoginPage = () => {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false); // state untuk menunjukkan atau menyembunyikan password
 
+  const backendURL = "http://localhost:8081"; // URL backend yang benar
+
   const handleLogin = async (e) => {
     e.preventDefault();
+    console.log("Attempting to login with", email, password);
 
-    // Validasi input kosong
     if (!email || !password) {
       setError("Email dan kata sandi harus diisi.");
       return;
     }
 
     try {
-      const response = await axios.post("/api/login", {
+      const response = await axios.post(`${backendURL}/api/user/login`, {
         email,
         password,
       });
-      console.log(response.data);
+      console.log("Response from server:", response.data);
       if (response.data.message === "Login successful") {
-        // Simpan data pengguna ke localStorage
         localStorage.setItem("userData", JSON.stringify(response.data.user));
-        // Redirect ke halaman beranda
         window.location.href = "/Beranda";
       } else {
         setError("Email atau kata sandi salah.");
@@ -51,8 +51,8 @@ const LoginPage = () => {
           className="w-1/2 h-screen flex justify-center items-center"
           data-aos="fade-right"
         >
-          <div className=" w-full p-20 text-center">
-            <div className="text-lg w-auto h-auto font-semibold ">
+          <div className="w-full p-20 text-center">
+            <div className="text-lg w-auto h-auto font-semibold">
               <h1 className="">Masuk Akun PetPals Care</h1>
             </div>
             {error && <p className="text-red-500">{error}</p>}
@@ -123,7 +123,7 @@ const LoginPage = () => {
             <div className="p-4">
               <button
                 onClick={handleLogin}
-                className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold size-1 "
+                className="w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold size-1"
               >
                 Masuk Sekarang
               </button>
@@ -137,7 +137,7 @@ const LoginPage = () => {
           className="w-1/2 h-screen bg-[#F7DBA7] flex justify-center items-center custom-border-radius"
           data-aos="fade-left"
         >
-          <div className="">
+          <div>
             <div className="h-auto w-full max-w-72">
               <a href="/" data-aos="zoom-in">
                 <img src={Logo} alt="Logo" />
@@ -149,13 +149,13 @@ const LoginPage = () => {
               data-aos="fade-up"
             >
               <a href="/Daftar-PetPalsCare">
-                <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold ">
+                <button className="w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold">
                   Daftar
                 </button>
               </a>
             </div>
             <div
-              className="flex justify-center items-center "
+              className="flex justify-center items-center"
               data-aos="fade-up"
             >
               <a href="/Login-dokter" className="text-[#777]">

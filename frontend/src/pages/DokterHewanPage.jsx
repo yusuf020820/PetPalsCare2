@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import DokterCowo from "../assets/images/DokterCowo.png";
 import DokterHewan from "../assets/images/DokterHewan.png";
 import Navbar from "../Components/Navbar-after";

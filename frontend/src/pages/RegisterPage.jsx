@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../assets/images/logo.png";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -16,6 +16,7 @@ const RegisterPage = () => {
   const [gender, setGender] = useState("");
   const [usia, setUsia] = useState("");
   const [alamat, setAlamat] = useState("");
+  const [foto, setFoto] = useState(null); // State untuk menyimpan file foto
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
@@ -23,21 +24,40 @@ const RegisterPage = () => {
     e.preventDefault();
 
     // Validasi input
-    if (!nama || !no_hp || !email || !password || !gender || !usia || !alamat) {
+    if (
+      !nama ||
+      !no_hp ||
+      !email ||
+      !password ||
+      !gender ||
+      !usia ||
+      !alamat ||
+      !foto
+    ) {
       setError("Semua data harus diisi.");
       return;
     }
 
     try {
-      const response = await axios.post("http://localhost:8081/register", {
-        nama,
-        no_hp,
-        email,
-        password,
-        gender,
-        usia,
-        alamat,
-      });
+      const formData = new FormData();
+      formData.append("nama", nama);
+      formData.append("no_hp", no_hp);
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("gender", gender);
+      formData.append("usia", usia);
+      formData.append("alamat", alamat);
+      formData.append("foto", foto); // Tambahkan file foto ke FormData
+
+      const response = await axios.post(
+        "http://localhost:8081/api/user/register",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       console.log(response.data);
       // Redirect to login page after successful registration
       window.location.href = "/Login-PetPalsCare";
@@ -65,7 +85,7 @@ const RegisterPage = () => {
               data-aos="fade-up"
             >
               <a href="/Login-PetPalsCare">
-                <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold ">
+                <button className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white py-2 px-16 rounded-full font-semibold ">
                   Masuk{" "}
                 </button>
               </a>
@@ -160,7 +180,7 @@ const RegisterPage = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        d="M13.875 18.825a10.05 10.05 0 01-1.875.175c-4.478 0-8.268-2.943-9.542-7a10.05 10.05 0 011.875-.175m11.717 4.826a3 3 0 00-4.244-4.244m3.27 2.489A10.07 10.07 0 0112 5c4.478 0 8.268 2.943 9.542 7-.733 2.332-2.03 4.32-3.757 5.689"
+                        d="M13.875 18.825a10.05 10.                  05 1.875.175c-4.478 0-8.268-2.943-9.542-7a10.05 10.05 0 011.875-.175m11.717 4.826a3 3 0 00-4.244-4.244m3.27 2.489A10.07 10.07 0 0112 5c4.478 0 8.268 2.943 9.542 7-.733 2.332-2.03 4.32-3.757 5.689"
                       />
                     </svg>
                   )}
@@ -201,10 +221,20 @@ const RegisterPage = () => {
                 onChange={(e) => setAlamat(e.target.value)}
               />
             </div>
+            <div className="py-2" data-aos="fade-up">
+              <input
+                type="file"
+                name="foto"
+                accept="image/*"
+                className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#eee] text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                onChange={(e) => setFoto(e.target.files[0])}
+                encType="multipart/form-data" // Add this line
+              />
+            </div>
             <div className="p-4" data-aos="fade-up">
               <button
                 onClick={handleRegister}
-                className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white font-bold py-2 px-16 rounded-full font-semibold size-1 "
+                className=" w-auto h-auto bg-[#DE9455] hover:bg-[#D68B4B] text-white  py-2 px-16 rounded-full font-semibold size-1 "
               >
                 Daftar Sekarang
               </button>

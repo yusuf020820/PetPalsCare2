@@ -49,7 +49,7 @@ const RegisterDokterPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8081/register-dokter",
+        "http://localhost:8081/api/dokter/register",
         formData
       );
       alert(response.data.message);
