@@ -39,77 +39,75 @@ const data = [
 
 const Card = ({ JenisHewan, Nama, Kelamin, Usia, imageUrl }) => {
   return (
-    <div className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden">
-      <img className="w-full h-40 object-cover" src={imageUrl} alt={Nama} />
+    <div className="max-w-xs mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+      <img className="w-full h-50 object-cover" src={imageUrl} alt={Nama} />
       <div className="px-6 py-4">
         <div className="font-bold text-base mb-2">
           <h1>{JenisHewan}</h1>
         </div>
         <div className="text-xs">
-        <p className="text-[#667479] ">Nama: {Nama}</p>
-          <p className="text-[#667479] ">Kelamin: {Kelamin}</p>
-          <p className="text-[#667479] ">Usia: {Usia}</p>
+          <p className="text-[#667479]">Nama: {Nama}</p>
+          <div className="text-xs flex gap-2">
+            <p className="text-[#667479]">Kelamin: {Kelamin}</p>
+            <span className="text-[#667479] text-sm">&bull;</span>
+            <p className="text-[#667479]">Usia: {Usia}</p>
           </div>
-          <div className="">
-          <button className="border-2 border-[#ED9455] mt-4 w-full py-1 hover:bg-[#ffc296] text-[#ED9455] rounded-lg transition duration-300">
-           Ubah Data
-          </button>
+        </div>
+        <div className="mt-4">
           <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-           Hapus
+            Hapus
           </button>
-              </div>
+        </div>
       </div>
     </div>
   );
 };
+
 const PostingHewanPage = () => {
   return (
     <>
       <Navbar />
-      <div className=" flex justify-center items-start  ">
-
+      <div className="flex justify-center items-start">
         <div className="w-1/3 h-screen p-8">
           <ul>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil">Profil Saya</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil-chat">Pesan</a></li>
-            <li className="p-2  hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Posting Hewan Saya</a></li>
+            <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil">Profil Saya</a></li>
+            <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg"><a href="/Profil-chat">Pesan</a></li>
+            <li className="p-2 hover:bg-gray-400 border-collapse rounded-lg"><a href="#">Posting Hewan Saya</a></li>
             <div className="py-4">
-            <li className="py-2 px-2  hover:bg-gray-400 border-collapse rounded-lg"> <a href="http://localhost:5173/"> Keluar</a></li>
+              <li className="py-2 px-2 hover:bg-gray-400 border-collapse rounded-lg"><a href="http://localhost:5173/">Keluar</a></li>
             </div>
           </ul>
         </div>
-        <div className=" w-full h-auto p-12">
-          <div className="bg-white p-4 rounded-xl w-full h-full shadow-2xl">
-            <h1 className="p-4"> Postingan Hewan Saya </h1>
-            <div className="px-4 py-2 ">
-              <button className=" text-white  py-2 px-4 rounded-md bg-[#DE9455] hover:bg-[#D68B4B]"> <a href="/Upload-hewan"> + Posting Hewan</a></button>
+        <div className="w-full h-auto p-4">
+          <div className="bg-white p-0 rounded-xl w-full h-full shadow-2xl">
+            <h1 className="p-4">Postingan Hewan Saya</h1>
+            <div className="px-4 py-2">
+              <button className="text-white py-2 px-4 rounded-md bg-[#DE9455] hover:bg-[#D68B4B]">
+                <a href="/Upload-hewan">+ Posting Hewan</a>
+              </button>
             </div>
-            
+
             {/* Grid */}
             <div className="container mx-auto p-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-auto w-auto">
                 {data.map((item) => (
-                 <Card
-                 key={item.id}
-                 Nama={item.Nama}
-                 JenisHewan={item.JenisHewan}
-                 Kelamin={item.Kelamin}
-                 Usia={item.Usia}
-                 imageUrl={item.imageUrl}
-                 
-               />
+                  <Card
+                    key={item.id}
+                    Nama={item.Nama}
+                    JenisHewan={item.JenisHewan}
+                    Kelamin={item.Kelamin}
+                    Usia={item.Usia}
+                    imageUrl={item.imageUrl}
+                  />
                 ))}
-                
               </div>
-             
             </div>
           </div>
         </div>
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default PostingHewanPage
+export default PostingHewanPage;
