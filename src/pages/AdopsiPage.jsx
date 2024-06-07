@@ -79,8 +79,11 @@ const Card = ({ JenisHewan, Nama, Kelamin, Usia, imageUrl }) => {
         </div>
         <div className=" text-xs">
         <p className="text-[#667479] ">Nama   : {Nama}</p>
+        <div className="flex gap-2 items-center">
           <p className="text-[#667479] ">Kelamin: {Kelamin}</p>
+          <span className="text-[#667479] text-sm">&bull;</span>
           <p className="text-[#667479]">Usia: {Usia}</p>
+          </div>
         </div>
         <a href="/Detail-hewan">
           <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">

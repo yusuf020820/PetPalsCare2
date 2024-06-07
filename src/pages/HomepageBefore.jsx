@@ -116,7 +116,7 @@ const petData = [
 
 const Card = ({ Imgurl, text, description }) => {
   return (
-    <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6" data-aos="fade-up">
+    <div className="bg-[#F1F1F1] shadow-md rounded-lg p-6">
       <div className="flex items-center justify-start mb-4">
         <img src={Imgurl} alt={text} className="h-12 w-12" />
       </div>
@@ -167,26 +167,20 @@ const DoctorCard = ({ imageUrl, name, specialty, experience }) => {
 
 const PetCard = ({ imageUrl, nama, ras, kelamin, usia }) => {
   return (
-    <div
-      className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden"
-      data-aos="fade-up"
-    >
+    <div className="max-w-xs mx-1 bg-white rounded-xl shadow-lg overflow-hidden">
       <img className="w-full h-52 object-cover" src={imageUrl} alt={nama} />
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-slate-900">{nama}</h2>
-        <div className="mt-2 text-gray-600">
-          <p className="line-clamp-1">
-            <span className="font-semibold">Ras:</span> {ras}
-          </p>
-          <p>
-            <span className="font-semibold">Kelamin:</span> {kelamin}
-          </p>
-          <p>
-            <span className="font-semibold">Usia:</span> {usia}
-          </p>
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">
+          <h1>{ras}</h1>
+        </div>
+        <p className="text-[#667479] text-sm">Nama: {nama}</p>
+        <div className="flex gap-2 items-center">
+          <p className="text-[#667479] text-sm">Kelamin: {kelamin}</p>
+          <span className="text-[#667479] text-sm">&bull;</span>
+          <p className="text-[#667479] text-sm">Usia: {usia}</p>
         </div>
         <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-          <a href="/Login-PetPalsCare">Lihat Detail</a>
+          Lihat Detail
         </button>
       </div>
     </div>

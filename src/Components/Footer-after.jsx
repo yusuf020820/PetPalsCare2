@@ -9,8 +9,9 @@ const Footer = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+            
               <div className="mb-10 w-full">
-                <a href="/Beranda" className="mb-6 inline-block max-w-[160px]">
+                <a href="/Beranda" className="mb-6 inline-block max-w-[90px]">
                   <img
                     src={Logo}
                     alt="logo"

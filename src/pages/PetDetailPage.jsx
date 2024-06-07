@@ -78,30 +78,30 @@ const PetDetailPage = () => {
             src="https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-puppy-standing-outdoors.jpg"
             alt="Pet"
           />
-          <div className="flex space-x-3 justify-start">
+          <div className="flex space-x-3 justify-start ">
             <img
-              className="w-24 h-24 rounded-md border-2"
-              src="https://via.placeholder.com/94x94"
+              className="w-24 h-24 rounded-md border-2 border-[#ED9455] "
+              src="https://i.ibb.co.com/Bt1mBFp/5.png"
               alt="Thumbnail"
             />
             <img
               className="w-24 h-24 rounded-md border-2"
-              src="https://via.placeholder.com/94x94"
+              src="https://i.ibb.co.com/k1QZ2cp/1.png"
               alt="Thumbnail"
             />
             <img
               className="w-24 h-24 rounded-md border-2"
-              src="https://via.placeholder.com/94x94"
+              src="https://i.ibb.co.com/4sGCWvT/2.png"
               alt="Thumbnail"
             />
             <img
               className="w-24 h-24 rounded-md border-2"
-              src="https://via.placeholder.com/94x94"
+              src="https://i.ibb.co.com/m96QPw9/3.png"
               alt="Thumbnail"
             />
             <img
               className="w-24 h-24 rounded-md border-2"
-              src="https://via.placeholder.com/94x94"
+              src="https://i.ibb.co.com/4Rp0tCv/4.png"
               alt="Thumbnail"
             />
           </div>

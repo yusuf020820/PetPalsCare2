@@ -8,9 +8,9 @@ const Footer = () => {
       <footer className="relative z-10 pb-10 pt-20 bg-[#FCF1DC] lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+            <div className=" w-full px-4 sm:w-2/3 lg:w-3/12">
               <div className="mb-10 w-full">
-                <a href="/#" className="mb-6 inline-block max-w-[160px]">
+                <a href="/#" className="mb-6 inline-block max-w-[90px]">
                   <img
                     src={Logo}
                     alt="logo"
