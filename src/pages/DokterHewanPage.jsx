@@ -6,7 +6,7 @@ import Navbar from "../Components/Navbar-after";
 import Footer from "../Components/Footer-after";
 
 // Komponen Kartu (Card) yang menerima properti teks
-const Card = ({ image, doctorName, specialty, experience }) => (
+const Card = ({ image, doctorName, specialty, experience, gender }) => (
   <div className="max-w-sm bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center font-poppins">
     <img className="w-full h-72 object-fill" src={image} alt="Dokter" />
     <div className="p-4 flex flex-col items-start w-full">
@@ -20,7 +20,7 @@ const Card = ({ image, doctorName, specialty, experience }) => (
         <span className="font-medium">Pengalaman:</span> {experience}
       </p>
       <button className="mt-4 w-full py-1 bg-[#ED9455] hover:bg-[#f89b59] text-white rounded-lg transition duration-300">
-      <a href="/Detail-dokter-pria">Lihat Detail</a>
+        <a href={gender === "pria" ? "/Detail-dokter-pria" : "/Detail-dokter-wanita"}>Lihat Detail</a>
       </button>
     </div>
   </div>
@@ -33,72 +33,84 @@ const DokterHewanPage = () => {
       doctorName: "Drh. Muhammad Ali",
       specialty: "Hewan Domestik dan Eksotik",
       experience: "7 Tahun",
+      gender: "pria",
     },
     {
       image: DokterCewe,
       doctorName: "Drh. Zahra Salsabila",
       specialty: "Kucing dan Anjing",
       experience: "7 Tahun",
+      gender: "wanita",
     },
     {
       image: DokterCowo,
       doctorName: "Drh. Septian Priatama",
       specialty: "Hewan Ternak dan Unggas",
       experience: "7 Tahun",
+      gender: "pria",
     },
     {
       image: DokterCewe,
       doctorName: "Drh. Ami Kosriami",
       specialty: "Anjing dan Kucing, Ternak",
       experience: "7 Tahun",
+      gender: "wanita",
     },
     {
       image: DokterCowo,
       doctorName: "Drh. Arjuna Wijaya",
       specialty: "Hewan Domestik dan Eksotik",
       experience: "10 Tahun",
+      gender: "pria",
     },
     {
       image: DokterCewe,
       doctorName: "Drh. Silvia Candra",
       specialty: "Kucing dan Anjing",
       experience: "5 Tahun",
+      gender: "wanita",
     },
     {
       image: DokterCowo,
       doctorName: "Drh. Dimas Pratama",
       specialty: "Hewan Ternak dan Unggas",
       experience: "10 Tahun",
+      gender: "pria",
     },
     {
       image: DokterCewe,
       doctorName: "Drh. Diyah Pitaloka",
       specialty: "Anjing dan Kucing, Ternak",
       experience: "7 Tahun",
+      gender: "wanita",
     },
     {
       image: DokterCowo,
       doctorName: "H.M.A.Cholik",
       specialty: "Hewan Domestik dan Eksotik",
       experience: "7 Tahun",
+      gender: "pria",
     },
     {
       image: DokterCewe,
       doctorName: "Drh. Anindita Ika A",
       specialty: "Kucing dan Anjing",
       experience: "5 Tahun",
+      gender: "wanita",
     },
     {
       image: DokterCowo,
       doctorName: "Drh. Cokro Susmito",
       specialty: "Hewan Ternak dan Unggas",
       experience: "7 Tahun",
+      gender: "pria",
     },
     {
       image: DokterCewe,
       doctorName: "Drh. Yana Rosa",
       specialty: "Anjing dan Kucing, Ternak",
       experience: "7 Tahun",
+      gender: "wanita",
     },
   ];
 
